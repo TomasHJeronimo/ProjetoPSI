@@ -85,8 +85,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </td>
                                 <td>
                                     <?= Html::a('<i class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-eye"></i></i>', ['empresa/view', 'id' => $empresa->id], ['class' => 'settings','title'=>'Mais Informações', 'data-toggle'=>'tooltip']); ?>
-                                    <?= Html::a('<i class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-edit"></i></i>', ['user/update', 'id' => $empresa->id], ['class' => 'settings','title'=>'Editar utilizador', 'data-toggle'=>'tooltip']); ?>
-                                    <?= Html::a('<i class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-trash"></i></i>', ['user/delete', 'id' => $empresa->id], ['class' => 'delete','title'=>'Apagar','data' => ['method' => 'post'], 'data-toggle'=>'tooltip']); ?>
+                                    <?= Html::a('<i class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-edit"></i></i>', ['empresa/update', 'id' => $empresa->id], ['class' => 'settings','title'=>'Editar utilizador', 'data-toggle'=>'tooltip']); ?>
+                                    <?= Html::a('<i class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-trash"></i></i>', ['empresa/delete', 'id' => $empresa->id], ['class' => 'delete','title'=>'Apagar','data' => ['method' => 'post'], 'data-toggle'=>'tooltip']); ?>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

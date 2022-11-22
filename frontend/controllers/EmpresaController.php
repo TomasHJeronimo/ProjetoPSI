@@ -46,7 +46,7 @@ class EmpresaController extends Controller
 
         $searchModel = new EmpresaSearch();
         $dataProvider = $searchModel->searchMinhasEmpresas($this->request->queryParams);
-        $query = Empresa::find()->where(['id' => \Yii::$app->user->id]);
+        $query = Empresa::find()->where(['idAdmin' => \Yii::$app->user->id]);
         $empresa = $query->all();
 
         return $this->render('index', [
@@ -77,6 +77,8 @@ class EmpresaController extends Controller
     public function actionCreate()
     {
         $model = new Empresa();
+
+        $model->idAdmin = \Yii::$app->user->id;
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {

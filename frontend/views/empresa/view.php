@@ -102,32 +102,32 @@ $this->params['breadcrumbs'][] = $this->title;
                 flex-wrap: nowrap;
             }
         }
-        .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link {
+        .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link .something {
             padding: 0.8125rem 0.625rem 0.5625rem;
             text-align: center;
         }
         @media (max-width: 991.98px) {
-            .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link {
+            .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link .something {
                 padding: 0.9375rem 0.625rem 0.3125rem;
             }
         }
-        .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link .nav-field {
+        .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link .something .nav-field {
             font-weight: 600;
             font-size: 0.8125rem;
         }
         @media (max-width: 991.98px) {
-            .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link .nav-field {
+            .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link .something .nav-field {
                 font-size: 0.6875rem;
                 margin-bottom: -0.125rem;
             }
         }
-        .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link .nav-value {
+        .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link .something .nav-value {
             font-size: 1.25rem;
             font-weight: 400;
             letter-spacing: -0.5px;
         }
         @media (max-width: 991.98px) {
-            .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link .nav-value {
+            .profile .profile-header .profile-header-content .profile-header-tab .nav-item .nav-link .something .nav-value {
                 font-size: 1.125rem;
             }
         }
@@ -244,7 +244,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                     <ul class="profile-header-tab nav nav-tabs nav-tabs-v2">
                         <li class="nav-item">
-                            <a href="#profile-post" class="nav-link" data-toggle="tab">
+
+                                <h1><?= $model->Nome ?> </h1>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab">
                                 <?= Html::a('Atualizar Dados', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
                             </a>
                         </li>
@@ -288,7 +293,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <u>Sobre nós</u>
                 </h3>
                 <p>
-                    <?= $model->descricao ?>
+                    <?php echo $model->descricao ?>
                 </p>
             </div>
 
