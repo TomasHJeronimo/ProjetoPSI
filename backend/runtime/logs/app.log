@@ -1,0 +1,1189 @@
+2022-11-22 10:08:04 [::1][1][bslq86biv7gb20o7knk9dc6bde][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "users". in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('users', Array)
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-11-22 10:08:04 [::1][1][bslq86biv7gb20o7knk9dc6bde][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    'advanced-backend' => 'bslq86biv7gb20o7knk9dc6bde'
+    '_identity-backend' => 'e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"umykV5DNWr3yn45LMbyUGGzwtTQd_H_U\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+    '__id' => 1
+    '__authKey' => 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; advanced-backend=bslq86biv7gb20o7knk9dc6bde; _identity-backend=e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umykV5DNWr3yn45LMbyUGGzwtTQd_H_U%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59283'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/users'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669111684.7011
+    'REQUEST_TIME' => 1669111684
+]
+2022-11-22 10:08:08 [::1][1][bslq86biv7gb20o7knk9dc6bde][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\wamp64\www\HuntingJobs\backend\views\user\index.php in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\wamp64\\www\\H...', Array, Object(backend\controllers\UserController))
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('index', Array, Object(backend\controllers\UserController))
+#2 C:\wamp64\www\HuntingJobs\backend\controllers\UserController.php(9): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\UserController->actionIndex()
+#4 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('', Array)
+#7 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user', Array)
+#8 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2022-11-22 10:08:08 [::1][1][bslq86biv7gb20o7knk9dc6bde][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    'advanced-backend' => 'bslq86biv7gb20o7knk9dc6bde'
+    '_identity-backend' => 'e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"umykV5DNWr3yn45LMbyUGGzwtTQd_H_U\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+    '__id' => 1
+    '__authKey' => 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; advanced-backend=bslq86biv7gb20o7knk9dc6bde; _identity-backend=e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umykV5DNWr3yn45LMbyUGGzwtTQd_H_U%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59283'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/user'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669111688.3795
+    'REQUEST_TIME' => 1669111688
+]
+2022-11-22 10:08:35 [::1][1][bslq86biv7gb20o7knk9dc6bde][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "users". in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('users', Array)
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-11-22 10:08:35 [::1][1][bslq86biv7gb20o7knk9dc6bde][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    'advanced-backend' => 'bslq86biv7gb20o7knk9dc6bde'
+    '_identity-backend' => 'e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"umykV5DNWr3yn45LMbyUGGzwtTQd_H_U\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+    '__id' => 1
+    '__authKey' => 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; advanced-backend=bslq86biv7gb20o7knk9dc6bde; _identity-backend=e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umykV5DNWr3yn45LMbyUGGzwtTQd_H_U%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59292'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/users'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669111715.9393
+    'REQUEST_TIME' => 1669111715
+]
+2022-11-22 10:09:04 [::1][1][bslq86biv7gb20o7knk9dc6bde][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "rbac". in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('rbac', Array)
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-11-22 10:09:04 [::1][1][bslq86biv7gb20o7knk9dc6bde][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    'advanced-backend' => 'bslq86biv7gb20o7knk9dc6bde'
+    '_identity-backend' => 'e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"umykV5DNWr3yn45LMbyUGGzwtTQd_H_U\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+    '__id' => 1
+    '__authKey' => 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; advanced-backend=bslq86biv7gb20o7knk9dc6bde; _identity-backend=e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umykV5DNWr3yn45LMbyUGGzwtTQd_H_U%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59299'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/rbac'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/rbac'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669111744.7236
+    'REQUEST_TIME' => 1669111744
+]
+2022-11-22 10:10:49 [::1][1][bslq86biv7gb20o7knk9dc6bde][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "users". in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('users', Array)
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-11-22 10:10:49 [::1][1][bslq86biv7gb20o7knk9dc6bde][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    'advanced-backend' => 'bslq86biv7gb20o7knk9dc6bde'
+    '_identity-backend' => 'e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"umykV5DNWr3yn45LMbyUGGzwtTQd_H_U\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+    '__id' => 1
+    '__authKey' => 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; advanced-backend=bslq86biv7gb20o7knk9dc6bde; _identity-backend=e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umykV5DNWr3yn45LMbyUGGzwtTQd_H_U%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59350'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/users'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669111849.6275
+    'REQUEST_TIME' => 1669111849
+]
+2022-11-22 10:10:59 [::1][1][bslq86biv7gb20o7knk9dc6bde][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\controllers\UserController' in file: C:\wamp64\www\HuntingJobs/backend/controllers/UserController.php. Namespace missing? in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\control...')
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(661): class_exists('backend\\control...')
+#2 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(620): yii\base\Module->createControllerByID('user')
+#3 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(546): yii\base\Module->createController('')
+#4 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user', Array)
+#5 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2022-11-22 10:10:59 [::1][1][bslq86biv7gb20o7knk9dc6bde][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    'advanced-backend' => 'bslq86biv7gb20o7knk9dc6bde'
+    '_identity-backend' => 'e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"umykV5DNWr3yn45LMbyUGGzwtTQd_H_U\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+    '__id' => 1
+    '__authKey' => 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; advanced-backend=bslq86biv7gb20o7knk9dc6bde; _identity-backend=e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umykV5DNWr3yn45LMbyUGGzwtTQd_H_U%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59361'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/user'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669111859.9465
+    'REQUEST_TIME' => 1669111859
+]
+2022-11-22 10:11:13 [::1][1][bslq86biv7gb20o7knk9dc6bde][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\wamp64\www\HuntingJobs\backend\views\user\index.php in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\wamp64\\www\\H...', Array, Object(backend\controllers\UserController))
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('index', Array, Object(backend\controllers\UserController))
+#2 C:\wamp64\www\HuntingJobs\backend\controllers\UserController.php(9): yii\base\Controller->render('index')
+#3 [internal function]: backend\controllers\UserController->actionIndex()
+#4 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('', Array)
+#7 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user', Array)
+#8 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2022-11-22 10:11:13 [::1][1][bslq86biv7gb20o7knk9dc6bde][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    'advanced-backend' => 'bslq86biv7gb20o7knk9dc6bde'
+    '_identity-backend' => 'e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"umykV5DNWr3yn45LMbyUGGzwtTQd_H_U\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+    '__id' => 1
+    '__authKey' => 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; advanced-backend=bslq86biv7gb20o7knk9dc6bde; _identity-backend=e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umykV5DNWr3yn45LMbyUGGzwtTQd_H_U%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59362'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/user'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669111873.3271
+    'REQUEST_TIME' => 1669111873
+]
+2022-11-22 10:11:24 [::1][1][bslq86biv7gb20o7knk9dc6bde][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "users". in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('users', Array)
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-11-22 10:11:24 [::1][1][bslq86biv7gb20o7knk9dc6bde][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    'advanced-backend' => 'bslq86biv7gb20o7knk9dc6bde'
+    '_identity-backend' => 'e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"umykV5DNWr3yn45LMbyUGGzwtTQd_H_U\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+    '__id' => 1
+    '__authKey' => 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; advanced-backend=bslq86biv7gb20o7knk9dc6bde; _identity-backend=e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umykV5DNWr3yn45LMbyUGGzwtTQd_H_U%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59367'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/users'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669111884.0034
+    'REQUEST_TIME' => 1669111884
+]
+2022-11-22 10:13:03 [::1][1][bslq86biv7gb20o7knk9dc6bde][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "users". in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('users', Array)
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-11-22 10:13:03 [::1][1][bslq86biv7gb20o7knk9dc6bde][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    'advanced-backend' => 'bslq86biv7gb20o7knk9dc6bde'
+    '_identity-backend' => 'e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"umykV5DNWr3yn45LMbyUGGzwtTQd_H_U\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+    '__id' => 1
+    '__authKey' => 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; advanced-backend=bslq86biv7gb20o7knk9dc6bde; _identity-backend=e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umykV5DNWr3yn45LMbyUGGzwtTQd_H_U%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59385'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/users'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669111983.6233
+    'REQUEST_TIME' => 1669111983
+]
+2022-11-22 10:13:45 [::1][1][bslq86biv7gb20o7knk9dc6bde][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "users". in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('users', Array)
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-11-22 10:13:45 [::1][1][bslq86biv7gb20o7knk9dc6bde][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    'advanced-backend' => 'bslq86biv7gb20o7knk9dc6bde'
+    '_identity-backend' => 'e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"umykV5DNWr3yn45LMbyUGGzwtTQd_H_U\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+    '__id' => 1
+    '__authKey' => 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; advanced-backend=bslq86biv7gb20o7knk9dc6bde; _identity-backend=e61d9f564fc6c1dfeb5ed87f98ec880773e3696edbd2cf2a57d7ab0d4eb6c2f3a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22umykV5DNWr3yn45LMbyUGGzwtTQd_H_U%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59396'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/users'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669112025.6928
+    'REQUEST_TIME' => 1669112025
+]
+2022-11-22 10:14:17 [::1][-][vtvtm7552crg99t8qc5it21ofg][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/users in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Controller.php:149
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('users', Array)
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/users', Array)
+#2 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-11-22 10:14:17 [::1][-][vtvtm7552crg99t8qc5it21ofg][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+    'advanced-backend' => 'vtvtm7552crg99t8qc5it21ofg'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D; advanced-backend=vtvtm7552crg99t8qc5it21ofg'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59423'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/site/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/site/users'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669112057.4237
+    'REQUEST_TIME' => 1669112057
+]
+2022-11-22 10:14:21 [::1][-][vtvtm7552crg99t8qc5it21ofg][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "users". in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php:561
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('users', Array)
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2022-11-22 10:14:21 [::1][-][vtvtm7552crg99t8qc5it21ofg][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+    'advanced-backend' => 'vtvtm7552crg99t8qc5it21ofg'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D; advanced-backend=vtvtm7552crg99t8qc5it21ofg'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59423'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/users'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/users'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669112061.0355
+    'REQUEST_TIME' => 1669112061
+]
+2022-11-22 10:14:23 [::1][-][vtvtm7552crg99t8qc5it21ofg][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\controllers\UserController' in file: C:\wamp64\www\HuntingJobs/backend/controllers/UserController.php. Namespace missing? in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\\control...')
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(661): class_exists('backend\\control...')
+#2 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(620): yii\base\Module->createControllerByID('user')
+#3 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(546): yii\base\Module->createController('')
+#4 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user', Array)
+#5 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2022-11-22 10:14:23 [::1][-][vtvtm7552crg99t8qc5it21ofg][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+    'advanced-backend' => 'vtvtm7552crg99t8qc5it21ofg'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D; advanced-backend=vtvtm7552crg99t8qc5it21ofg'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59423'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/user'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669112063.9875
+    'REQUEST_TIME' => 1669112063
+]
+2022-11-22 10:14:34 [::1][-][vtvtm7552crg99t8qc5it21ofg][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: C:\wamp64\www\HuntingJobs\backend\views\user\index.php in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\View.php:233
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\wamp64\\www\\H...', Array, Object(backend\controllers\UserController))
+#1 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Controller.php(407): yii\base\View->render('index', Array, Object(backend\controllers\UserController))
+#2 C:\wamp64\www\HuntingJobs\backend\controllers\UserController.php(46): yii\base\Controller->render('index', Array)
+#3 [internal function]: backend\controllers\UserController->actionIndex()
+#4 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('', Array)
+#7 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user', Array)
+#8 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2022-11-22 10:14:34 [::1][-][vtvtm7552crg99t8qc5it21ofg][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+    'advanced-backend' => 'vtvtm7552crg99t8qc5it21ofg'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D; advanced-backend=vtvtm7552crg99t8qc5it21ofg'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59424'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/user'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669112074.5791
+    'REQUEST_TIME' => 1669112074
+]
+2022-11-22 10:17:16 [::1][-][vtvtm7552crg99t8qc5it21ofg][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'backend\models\UserSearch' in file: C:\wamp64\www\HuntingJobs/backend/models/UserSearch.php. Namespace missing? in C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 C:\wamp64\www\HuntingJobs\backend\controllers\UserController.php(41): yii\BaseYii::autoload('backend\\models\\...')
+#1 [internal function]: backend\controllers\UserController->actionIndex()
+#2 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Module.php(552): yii\base\Controller->runAction('', Array)
+#5 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user', Array)
+#6 C:\wamp64\www\HuntingJobs\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\HuntingJobs\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2022-11-22 10:17:16 [::1][-][vtvtm7552crg99t8qc5it21ofg][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-b898ddfd' => 'd11abdad-80d2-4e2d-8537-e8733bef2663'
+    '_identity-frontend' => '25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[3,\"ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x\",2592000]\";}'
+    '_csrf-backend' => 'fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"HhSumry7u0K7GVmyPGzx49FvoKV0NkQF\";}'
+    'advanced-backend' => 'vtvtm7552crg99t8qc5it21ofg'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost:8080/HuntingJobs/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"107\", \"Chromium\";v=\"107\", \"Not=A?Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-b898ddfd=d11abdad-80d2-4e2d-8537-e8733bef2663; _identity-frontend=25ca64dcab6df04dc0f424c353ee071c0426edfdf0d1983a64efc9120c70700da%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22ZrGG9ovW3OMeWTNeM7g-6MAzfZdX7D2x%22%2C2592000%5D%22%3B%7D; _csrf-backend=fdedfd3d4c72e967ff3e5203e084c3dc2e0fe6c6770b66cf0ecd2a5330672326a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22HhSumry7u0K7GVmyPGzx49FvoKV0NkQF%22%3B%7D; advanced-backend=vtvtm7552crg99t8qc5it21ofg'
+    'PATH' => 'C:\\Program Files (x86)\\VMware\\VMware Player\\bin\\;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\wamp64\\bin\\php\\php8.1.0;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet\\;C:\\Program Files (x86)\\Microsoft SQL Server\\80\\Tools\\Binn\\;C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\windows'
+    'COMSPEC' => 'C:\\windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.51 (Win64) PHP/8.1.0 Server at localhost Port 8080</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.51 (Win64) PHP/8.1.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8080'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www'
+    'SERVER_ADMIN' => 'wampserver@wampserver.invalid'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/HuntingJobs/backend/web/index.php'
+    'REMOTE_PORT' => '59441'
+    'REDIRECT_URL' => '/HuntingJobs/backend/web/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/HuntingJobs/backend/web/user'
+    'SCRIPT_NAME' => '/HuntingJobs/backend/web/index.php'
+    'PHP_SELF' => '/HuntingJobs/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1669112236.0503
+    'REQUEST_TIME' => 1669112236
+]
