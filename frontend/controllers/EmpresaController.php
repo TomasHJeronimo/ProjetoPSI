@@ -43,10 +43,14 @@ class EmpresaController extends Controller
         if (\Yii::$app->user->isGuest)
             throw new ForbiddenHttpException();
 
+
         $searchModel = new EmpresaSearch();
         $dataProvider = $searchModel->searchMinhasEmpresas($this->request->queryParams);
+        $query = Empresa::find()->where(['id' => \Yii::$app->user->id]);
+        $empresa = $query->all();
 
         return $this->render('index', [
+            'empresas' => $empresa,
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);

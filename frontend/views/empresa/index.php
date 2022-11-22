@@ -25,35 +25,20 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Empresa', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Nova Empresa', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'idAdmin',
-            'Nome',
-            'descricao',
-            'contactoTelefone',
-            'contactoTelemovel',
-            'morada',
-            'email:email',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Empresa $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
-                 }
-            ],
-        ],
-    ]); ?>
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <style>
+        #descricao{
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical
+        }
+    </style>
 
     <div class="container-fluid">
         <div class="row">
@@ -67,38 +52,44 @@ $this->params['breadcrumbs'][] = $this->title;
                             <thead>
                             <tr>
                                 <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Name</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Descrição</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium">Nome</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium" style="width: 30%">Descrição</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Telefone</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Telemóvel</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Morada</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium">Gestão</th>
                             </tr>
                             </thead>
                             <tbody>
+                            <?php foreach ($empresas as $empresa): ?>
                             <tr>
-                                <td class="pl-4">1</td>
+                                <td class="pl-4"><?= $empresa->id ?></td>
                                 <td>
-                                    <h5 class="font-medium mb-0">Nome da Empresa 1</h5>
+                                    <h5 class="font-medium mb-0"><?= $empresa->Nome ?></h5>
                                 </td>
                                 <td>
-                                    <span class="text-muted">Descrição da Empresa</span><br>
+                                    <span class="text-muted" id="descricao"><?= $empresa->descricao ?></span><br>
                                 </td>
                                 <td>
-                                    <span class="text-muted">918782326</span><br>
+                                    <span class="text-muted"><?= $empresa->contactoTelefone ?></span><br>
                                 </td>
                                 <td>
-                                    <span class="text-muted">261121212</span>
+                                    <span class="text-muted"><?= $empresa->contactoTelemovel ?></span>
                                 </td>
                                 <td>
-                                    <span class="text-muted">email@email.pt</span>
+                                    <span class="text-muted"><?= $empresa->email ?></span>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-search"></i> </button>
-                                    <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-edit"></i> </button>
-                                    <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"><i class="fa fa-trash"></i> </button>
+                                    <span class="text-muted"><?= $empresa->morada ?></span>
+                                </td>
+                                <td>
+                                    <?= Html::a('<i class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-eye"></i></i>', ['empresa/view', 'id' => $empresa->id], ['class' => 'settings','title'=>'Mais Informações', 'data-toggle'=>'tooltip']); ?>
+                                    <?= Html::a('<i class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-edit"></i></i>', ['user/update', 'id' => $empresa->id], ['class' => 'settings','title'=>'Editar utilizador', 'data-toggle'=>'tooltip']); ?>
+                                    <?= Html::a('<i class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-trash"></i></i>', ['user/delete', 'id' => $empresa->id], ['class' => 'delete','title'=>'Apagar','data' => ['method' => 'post'], 'data-toggle'=>'tooltip']); ?>
                                 </td>
                             </tr>
+                            <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
