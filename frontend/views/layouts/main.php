@@ -37,6 +37,7 @@ AppAsset::register($this);
     $menuItems = [
         ['label' => 'Home', 'url' => ['/site/index']],
         ['label' => 'About', 'url' => ['/site/about']],
+        
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
@@ -51,6 +52,7 @@ AppAsset::register($this);
             'options' => ['class' =>'nav navbar-nav'],
 
         ];
+
         $menuItems[] = ['label' => 'Perfil', 'url' => ['/user/view' , 'id'=>Yii::$app->getUser()->id]];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])

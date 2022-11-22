@@ -10,13 +10,7 @@ use yii\bootstrap4\Breadcrumbs;
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">
-                        <?php
-                        if (!is_null($this->title)) {
-                            echo \yii\helpers\Html::encode($this->title);
-                        } else {
-                            echo \yii\helpers\Inflector::camelize($this->context->id);
-                        }
-                        ?>
+                        HuntingJobs
                     </h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
@@ -33,10 +27,9 @@ use yii\bootstrap4\Breadcrumbs;
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
-    <!-- Main content -->
     <div class="content">
         <?= $content ?><!-- /.container-fluid -->
     </div>
+    <!-- Main content -->
     <!-- /.content -->
 </div>
