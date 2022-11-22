@@ -4,6 +4,8 @@ namespace backend\controllers;
 
 use common\models\User;
 use backend\models\UserSearch;
+use common\modules\auth\models\AuthAssignment;
+use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -42,8 +44,11 @@ class UserController extends Controller
         $dataProvider = $searchModel->search($this->request->queryParams);
         $query = User::find();
         $users = $query->all();
+        $query_roles = AuthAssignment::find();
+        $roles = $query_roles->all();
 
         return $this->render('index', [
+            'roles' => $roles,
             'users' => $users,
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,

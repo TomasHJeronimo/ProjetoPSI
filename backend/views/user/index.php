@@ -228,15 +228,29 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <h5 class="font-medium mb-0"><?= $user->username ?></h5>
                                 </td>
                                 <td>
-                                    <span class="text-muted">Role</span><br>
-                                    <span class="text-muted">Por-fazer</span>
+                                    <?php
+                                    foreach ($roles as $role):
+                                    if ($role->user_id == $user->id){
+                                        if ($role->item_name == 'admin'){
+                                            ?>
+                                            <span class="text-muted" style="color: blue !important;">Admin</span><br>
+                                         <?php
+                                        }
+                                        else if ($role->item_name == 'common_user'){
+                                            ?>
+                                    <span class="text-muted" style="color: red !important;">Utilizador Comum</span><br>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+
+                                    <?php endforeach; ?>
                                 </td>
                                 <td>
                                     <span class="text-muted"><?= $user->email?></span><br>
                                 </td>
                                 <td>
-                                    <span class="text-muted">15 Mar 1988</span><br>
-                                    <span class="text-muted">10: 55 AM</span>
+                                    <span class="text-muted"><?= $user->created_at ?></span><br>
                                 </td>
                                 <td>
                                     <?= Html::a('<i class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-eye"></i></i>', ['user/view', 'id' => $user->id], ['class' => 'settings','title'=>'Mais Informações', 'data-toggle'=>'tooltip']); ?>
