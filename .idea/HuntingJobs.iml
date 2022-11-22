@@ -84,6 +84,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-bootstrap4" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/almasaeed2010/adminlte" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/hail812/yii2-adminlte-widgets" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/hail812/yii2-adminlte3" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

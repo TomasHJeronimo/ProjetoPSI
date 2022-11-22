@@ -10,6 +10,15 @@
         'dev' => true,
     ),
     'versions' => array(
+        'almasaeed2010/adminlte' => array(
+            'pretty_version' => 'v3.2.0',
+            'version' => '3.2.0.0',
+            'reference' => 'bd4d9c72931f1dd28601b6bfb387554a381ad540',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../almasaeed2010/adminlte',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'behat/gherkin' => array(
             'pretty_version' => 'v4.9.0',
             'version' => '4.9.0.0',
@@ -198,6 +207,24 @@
             'install_path' => __DIR__ . '/../guzzlehttp/psr7',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'hail812/yii2-adminlte-widgets' => array(
+            'pretty_version' => 'v1.0.5',
+            'version' => '1.0.5.0',
+            'reference' => 'bc942430d7a5f5636f6c492553b5f444bf4a6df6',
+            'type' => 'yii2-extension',
+            'install_path' => __DIR__ . '/../hail812/yii2-adminlte-widgets',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'hail812/yii2-adminlte3' => array(
+            'pretty_version' => 'v1.1.8',
+            'version' => '1.1.8.0',
+            'reference' => 'df2c9892a2856e3070374ce9856494033d5e5694',
+            'type' => 'yii2-extension',
+            'install_path' => __DIR__ . '/../hail812/yii2-adminlte3',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
             'pretty_version' => '1.11.0',
