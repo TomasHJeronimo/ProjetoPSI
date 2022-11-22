@@ -46,7 +46,7 @@ class Empresa extends \yii\db\ActiveRecord
             [[ 'Nome', 'descricao', 'morada', 'email'], 'required'],
             [['idAdmin', 'contactoTelefone', 'contactoTelemovel'], 'integer'],
             [['Nome'], 'string', 'max' => 50],
-            [['descricao', 'email'], 'string', 'max' => 255],
+            [['descricao', 'email'], 'string'],
             [['morada'], 'string', 'max' => 75],
         ];
     }

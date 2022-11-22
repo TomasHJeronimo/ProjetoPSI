@@ -46,8 +46,7 @@ AppAsset::register($this);
         $menuItems[] = [
             'label' => 'Empresas',
             'items' => [
-                ['label' => 'Empresas', 'url' => ['/empresa/index']],
-                ['label' => 'Nova Oferta', 'url' => ['/site/index']],
+                ['label' => 'Minhas Empresas', 'url' => ['/empresa/index']],
             ],
             'options' => ['class' =>'nav navbar-nav'],
 
