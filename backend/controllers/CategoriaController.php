@@ -1,20 +1,17 @@
 <?php
 
-namespace frontend\controllers;
+namespace backend\controllers;
 
-use common\models\Anuncio;
 use common\models\Categoria;
-use common\models\Empresa;
-use frontend\models\AnuncioSearch;
-use yii\helpers\ArrayHelper;
+use app\models\CategoriaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AnuncioController implements the CRUD actions for Anuncio model.
+ * CategoriaController implements the CRUD actions for Categoria model.
  */
-class AnuncioController extends Controller
+class CategoriaController extends Controller
 {
     /**
      * @inheritDoc
@@ -35,26 +32,23 @@ class AnuncioController extends Controller
     }
 
     /**
-     * Lists all Anuncio models.
+     * Lists all Categoria models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new AnuncioSearch();
+        $searchModel = new CategoriaSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
-
-        $items = ArrayHelper::map(Categoria::find()->all(), 'id', 'Nome');
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'items' => $items,
         ]);
     }
 
     /**
-     * Displays a single Anuncio model.
+     * Displays a single Categoria model.
      * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -67,13 +61,13 @@ class AnuncioController extends Controller
     }
 
     /**
-     * Creates a new Anuncio model.
+     * Creates a new Categoria model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new Anuncio();
+        $model = new Categoria();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -83,18 +77,13 @@ class AnuncioController extends Controller
             $model->loadDefaultValues();
         }
 
-        $items = ArrayHelper::map(Empresa::find()->where(['idAdmin' => \Yii::$app->user->id])->all(), 'id', 'Nome');
-        $itemsCategoria = ArrayHelper::map(Categoria::find()->all(), 'id', 'Nome');
-
         return $this->render('create', [
             'model' => $model,
-            'items' => $items,
-            'itemsCategoria' => $itemsCategoria,
         ]);
     }
 
     /**
-     * Updates an existing Anuncio model.
+     * Updates an existing Categoria model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return string|\yii\web\Response
@@ -114,7 +103,7 @@ class AnuncioController extends Controller
     }
 
     /**
-     * Deletes an existing Anuncio model.
+     * Deletes an existing Categoria model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return \yii\web\Response
@@ -128,15 +117,15 @@ class AnuncioController extends Controller
     }
 
     /**
-     * Finds the Anuncio model based on its primary key value.
+     * Finds the Categoria model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return Anuncio the loaded model
+     * @return Categoria the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Anuncio::findOne(['id' => $id])) !== null) {
+        if (($model = Categoria::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

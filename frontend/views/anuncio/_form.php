@@ -27,7 +27,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'perfil_procurado')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'categoria')->textInput() ?>
+    <?=
+    $form->field($model, 'categoria')
+        ->dropDownList(
+            $itemsCategoria,           // Flat array ('id'=>'label')
+            ['prompt'=>'Select...']    // options
+        );
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

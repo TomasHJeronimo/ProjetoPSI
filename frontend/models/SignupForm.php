@@ -57,14 +57,11 @@ class SignupForm extends Model
         $user->generateEmailVerificationToken();
         $user->status = 10;
 
-        return $user->save();
-
         //adicionar common_user ao registar now website
         $auth = Yii::$app->authManager;
         $utilizadorComumRole = $auth->getRole('common_user');
-        $auth->assign($utilizadorComumRole,$user->getId());
 
-
+        return $user->save() && $auth->assign($utilizadorComumRole,$user->id);
     }
 
     /**

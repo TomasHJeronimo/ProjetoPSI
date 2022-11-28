@@ -18,7 +18,13 @@ use yii\widgets\ActiveForm;
     <div class="row">
         <div class="col-md-2"> <?= $form->field($model, 'id') ?></div>
         <div class="col-md-2"> <?= $form->field($model, 'titulo') ?></div>
-        <div class="col-md-2"> <?= $form->field($model, 'categoria') ?></div>
+        <div class="col-md-2"> <?=
+            $form->field($model, 'categoria')
+                ->dropDownList(
+                    $items,           // Flat array ('id'=>'label')
+                    ['prompt' => 'Select...']    // options
+                );
+            ?> </div>
     </div>
 
     <div class="form-group">
