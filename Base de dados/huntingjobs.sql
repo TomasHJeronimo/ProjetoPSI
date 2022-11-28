@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Nov-2022 às 16:14
+-- Tempo de geração: 28-Nov-2022 às 16:46
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -152,6 +152,16 @@ CREATE TABLE `categoria` (
   `Nome` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `categoria`
+--
+
+INSERT INTO `categoria` (`id`, `Nome`) VALUES
+(1, 'Informática'),
+(2, 'Marketing'),
+(3, 'Administração / Secretariado'),
+(4, 'Arquitetura / Design');
+
 -- --------------------------------------------------------
 
 --
@@ -230,7 +240,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`, `verification_token`) VALUES
 (1, 'Monteiro', 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U', '$2y$13$bRLIsUjr77FnSFGPyrMpXOiWkRiwLq4R/xf9SJfKGz8H9w76/.73m', NULL, 'monteiro@outlook.pt', 10, '0000-00-00 00:00:00', 1668696456, '5oclOf00qQai7068dpBCkG_OIEBGVAsY_1668696456'),
 (2, 'MonteiroComum', 'PDb3Lrlo5CDrVybqK_3DKAN0mJt5srVl', '$2y$13$aWxw/t9hjrE1jBmp2TN6P.4/9ne30dN9veFP6DBUOtXcfNSCHU.rK', NULL, 'MonteiroComum@outlook.pt', 10, '0000-00-00 00:00:00', 1668701014, 'N_YleDaQF28aELpnKfjjjCxKX7Mfw2k__1668701014'),
-(6, 'NovoUser', 'iQugv9RniBF4ZI98NSdx3zTKHFAbYTiB', '$2y$13$sTXzIiz77QvX7DxF3Hgg9OYqfysh9Fj5bv0vbhoWWHdWv.8GQTnNC', NULL, 'novouser@user.pt', 10, '0000-00-00 00:00:00', 1669646879, 'fpOIXYBxK0VNhTx0yD2zLxe81wWAluhF_1669646879');
+(11, 'some', '1xPAZwdZtBx0_FC5cD4FLQw3xKpkyzT6', '$2y$13$8R4FrYz/4xyhU2CfQxDjaOfyIZFsKo3Eq9.O9avEXK1OFkTlrnCUy', NULL, 'some@some.pt', 10, '0000-00-00 00:00:00', 1669649559, 'xa49VurA1lZEa3KuaUrsyKZ2T_-XCV4V_1669649559');
 
 --
 -- Índices para tabelas despejadas
@@ -324,7 +334,7 @@ ALTER TABLE `candidatura`
 -- AUTO_INCREMENT de tabela `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `empresa`
@@ -336,7 +346,7 @@ ALTER TABLE `empresa`
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restrições para despejos de tabelas
