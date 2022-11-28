@@ -47,6 +47,7 @@ AppAsset::register($this);
             'label' => 'Empresas',
             'items' => [
                 ['label' => 'Minhas Empresas', 'url' => ['/empresa/index']],
+                ['label' => 'Meus Anuncios', 'url' => ['/anuncio/index']],
             ],
             'options' => ['class' =>'nav navbar-nav'],
 

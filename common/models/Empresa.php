@@ -43,7 +43,7 @@ class Empresa extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [[ 'Nome', 'descricao', 'morada', 'email'], 'required'],
+            [['Nome', 'descricao', 'morada', 'email'], 'required'],
             [['idAdmin', 'contactoTelefone', 'contactoTelemovel'], 'integer'],
             [['Nome'], 'string', 'max' => 50],
             [['descricao', 'email'], 'string'],

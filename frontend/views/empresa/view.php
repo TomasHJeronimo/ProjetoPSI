@@ -249,7 +249,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                         </li>
                         <?php
-                         if (Yii::$app->getUser()->id == $model->id){
+                         if (Yii::$app->getUser()->id == $model->idAdmin){
                         ?>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab">

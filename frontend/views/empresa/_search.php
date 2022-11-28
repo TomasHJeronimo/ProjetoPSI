@@ -15,18 +15,20 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'idAdmin') ?>
+    <div class="row">
+        <div class="col-md-2"><?= $form->field($model, 'id') ?></div>
 
-    <?= $form->field($model, 'Nome') ?>
+        <div class="col-md-2"><?= $form->field($model, 'idAdmin') ?></div>
 
-    <?= $form->field($model, 'descricao') ?>
+        <div class="col-md-2"><?= $form->field($model, 'Nome') ?></div>
 
-    <?= $form->field($model, 'contactoTelefone') ?>
+        <div class="col-md-2"><?= $form->field($model, 'descricao') ?></div>
 
-    <?php // echo $form->field($model, 'contactoTelemovel') ?>
+        <div class="col-md-2"><?= $form->field($model, 'contactoTelefone') ?></div>
 
+        <div class="col-md-2"> <?php // echo $form->field($model, 'contactoTelemovel') ?></div>
+    </div>
     <?php // echo $form->field($model, 'morada') ?>
 
     <?php // echo $form->field($model, 'email') ?>

@@ -107,14 +107,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="col-md-6"><label class="labels">País</label><input type="text" readonly="true" class="form-control"  value="Em Desenvolvimento"></div>
                         <div class="col-md-6"><label class="labels">Região</label><input type="text" readonly="true" class="form-control" value="Em Desenvolvimento"></div>
                     </div>
-                    <div class="mt-4 text-center"><?= Html::a('Alterar Dados', ['update', 'id' => $model->id], ['class' => 'btn btn-primary profile-button']) ?>
-                        <?= Html::a('Apagar Conta', ['delete', 'id' => $model->id], [
-                            'class' => 'btn btn-danger',
-                            'data' => [
-                                'confirm' => 'Are you sure you want to delete this item?',
-                                'method' => 'post',
-                            ],
-                        ]) ?>
+                    <div class="mt-4 text-center">
+                        <?= Html::a('Alterar Dados', ['update', 'id' => $model->id], ['class' => 'btn btn-primary profile-button']) ?>
                     </div>
 
 
