@@ -16,15 +16,19 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="anuncio-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Create Anuncio', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <div class="container-fluid">
+
+        <h1><?= Html::encode($this->title) ?></h1>
+
+        <p>
+            <?= Html::a('Create Anuncio', ['create'], ['class' => 'btn btn-success']) ?>
+        </p>
+
+        <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+
+
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -36,15 +40,13 @@ $this->params['breadcrumbs'][] = $this->title;
                             <thead>
                             <tr>
                                 <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Nome</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium">Empresa</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium">Título</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium" style="width: 30%">
                                     Descrição
                                 </th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Telefone</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Telemóvel</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Morada</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Gestão</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium">Perfil Procurado</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium">Gerir</th>
                             </tr>
                             </thead>
                             <tbody>
