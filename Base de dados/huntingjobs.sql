@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Nov-2022 às 16:46
+-- Tempo de geração: 28-Nov-2022 às 17:18
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -43,7 +43,8 @@ CREATE TABLE `anuncio` (
 INSERT INTO `anuncio` (`id`, `id_Empresa`, `titulo`, `descricao`, `perfil_procurado`, `categoria`) VALUES
 (1, 1, 'Titulo1', 'Descricao 1', 'perfil 1', 0),
 (2, 4, 'Tituloteste', 'Tituloteste', 'Tituloteste', 0),
-(3, 1, 'Titulo1', 'Titulo1', 'Titulo1', 2);
+(3, 1, 'Titulo1', 'Titulo1', 'Titulo1', 2),
+(4, 1, 'Programador C#', 'Programador C#', 'Programador C#', 1);
 
 -- --------------------------------------------------------
 
@@ -322,7 +323,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de tabela `anuncio`
 --
 ALTER TABLE `anuncio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `candidatura`
