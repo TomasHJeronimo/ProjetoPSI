@@ -17,7 +17,7 @@ class AnuncioSearch extends Anuncio
     public function rules()
     {
         return [
-            [['id', 'id_Empresa'], 'integer'],
+            [['id', 'id_Empresa', 'categoria'], 'integer'],
             [['titulo', 'descricao', 'perfil_procurado'], 'safe'],
         ];
     }
@@ -60,6 +60,7 @@ class AnuncioSearch extends Anuncio
         $query->andFilterWhere([
             'id' => $this->id,
             'id_Empresa' => $this->id_Empresa,
+            'categoria' => $this->categoria,
         ]);
 
         $query->andFilterWhere(['like', 'titulo', $this->titulo])

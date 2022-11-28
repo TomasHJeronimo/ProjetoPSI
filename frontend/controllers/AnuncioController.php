@@ -3,7 +3,9 @@
 namespace frontend\controllers;
 
 use common\models\Anuncio;
+use common\models\Empresa;
 use frontend\models\AnuncioSearch;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -77,8 +79,11 @@ class AnuncioController extends Controller
             $model->loadDefaultValues();
         }
 
+        $items = ArrayHelper::map(Empresa::find()->where(['idAdmin' => \Yii::$app->user->id])->all(), 'id', 'Nome');
+
         return $this->render('create', [
             'model' => $model,
+            'items' => $items,
         ]);
     }
 

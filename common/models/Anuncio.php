@@ -12,6 +12,7 @@ use Yii;
  * @property string $titulo
  * @property string $descricao
  * @property string $perfil_procurado
+ * @property int $categoria
  */
 class Anuncio extends \yii\db\ActiveRecord
 {
@@ -29,8 +30,8 @@ class Anuncio extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_Empresa', 'titulo', 'descricao', 'perfil_procurado'], 'required'],
-            [['id_Empresa'], 'integer'],
+            [['id_Empresa', 'titulo', 'descricao', 'perfil_procurado', 'categoria'], 'required'],
+            [['id_Empresa', 'categoria'], 'integer'],
             [['descricao', 'perfil_procurado'], 'string'],
             [['titulo'], 'string', 'max' => 50],
         ];
@@ -47,6 +48,7 @@ class Anuncio extends \yii\db\ActiveRecord
             'titulo' => 'Titulo',
             'descricao' => 'Descricao',
             'perfil_procurado' => 'Perfil Procurado',
+            'categoria' => 'Categoria',
         ];
     }
 }

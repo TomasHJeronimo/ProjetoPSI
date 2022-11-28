@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Empresa;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -75,7 +76,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $query = Empresa::find();
+        $empresa = $query->all();
+
+        return $this->render('index', [
+            'empresas' => $empresa,
+        ]);
     }
 
     /**

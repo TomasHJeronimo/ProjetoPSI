@@ -52,8 +52,9 @@ AppAsset::register($this);
             'options' => ['class' =>'nav navbar-nav'],
 
         ];
-
+        $menuItems[] = ['label' => 'Ofertas', 'url' => ['/anuncio/index']];
         $menuItems[] = ['label' => 'Perfil', 'url' => ['/user/view' , 'id'=>Yii::$app->getUser()->id]];
+
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
             . Html::submitButton(
