@@ -43,16 +43,8 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
-        $menuItems[] = [
-            'label' => 'Empresas',
-            'items' => [
-                ['label' => 'Minhas Empresas', 'url' => ['/empresa/index']],
-                ['label' => 'Meus Anuncios', 'url' => ['/anuncio/index']],
-            ],
-            'options' => ['class' =>'nav navbar-nav'],
-
-        ];
         $menuItems[] = ['label' => 'Ofertas', 'url' => ['/anuncio/index']];
+        $menuItems[] = ['label' => 'Minhas Empresas', 'url' => ['/empresa/index']];
         $menuItems[] = ['label' => 'Perfil', 'url' => ['/user/view' , 'id'=>Yii::$app->getUser()->id]];
 
         $menuItems[] = '<li>'

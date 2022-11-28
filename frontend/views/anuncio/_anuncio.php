@@ -7,7 +7,7 @@ use yii\helpers\Html;
 <div class='tile'>
     <img class='tile-img' style="background-image: url(https://static.pexels.com/photos/9050/pexels-photo.jpg);"/>
     <div class='tile-info'>
-        <h1><?= $model->titulo ?></h1>
+        <h1><?= Html::a($model->titulo, ['view', 'id'=>$model->id]); ?></h1>
         <p><?= $model->descricao ?></p>
     </div>
 </div>

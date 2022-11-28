@@ -153,7 +153,7 @@ $this->title = 'HuntingJob';
         ?>
 
         <?php
-        foreach ($empresas as $empresa):
+        foreach ($anuncios as $anuncio):
             ?>
             <div class="item-class">
                 <div class="col-lg-12 col-md-6 col-sm-12">
@@ -162,10 +162,10 @@ $this->title = 'HuntingJob';
                                     src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ"
                                     alt="course"/></div>
                         <div class="course_card_content">
-                            <h3 class="title"><?= $empresa->Nome ?></h3>
+                            <h3 class="title"><?= $anuncio->titulo ?></h3>
                         </div>
                         <div class="course_card_footer">
-                            <?= Html::a('Ver mais...', ['empresa/view', 'id' => $empresa->id], ['class' => 'settings','title'=>'Mais Informações', 'data-toggle'=>'tooltip']); ?>
+                            <?= Html::a('Ver mais...', ['anuncio/view', 'id' => $anuncio->id], ['class' => 'settings','title'=>'Mais Informações', 'data-toggle'=>'tooltip']); ?>
                         </div>
                     </div>
                 </div>

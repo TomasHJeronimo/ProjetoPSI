@@ -6,6 +6,7 @@ use common\models\Anuncio;
 use common\models\Categoria;
 use common\models\Empresa;
 use frontend\models\AnuncioSearch;
+use yii\filters\AccessControl;
 use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -30,8 +31,49 @@ class AnuncioController extends Controller
                         'delete' => ['POST'],
                     ],
                 ],
+                'access' => [
+                    'class' => AccessControl::className(),
+                    'only' => ['update', 'delete'],
+                    'rules' => [
+                        [
+                            'actions' => ['update','delete'],
+                            'allow' => true,
+                            'roles' => ['@'],
+                            'matchCallback' => function ($rule, $action) {
+                                if ($this->isUserAuthor()) {
+                                    return true;
+                                }
+                                return false;
+                            }
+                        ],
+                    ],
+                ],
             ]
         );
+    }
+
+    public function isUserAuthor()
+    {
+       $idEmpresa = $this->findModel(\Yii::$app->request->get('id'))->id_Empresa;
+       $empresa = Empresa::find()->where(['id' => $idEmpresa]);
+       $query = $empresa->all();
+
+       $funciona = 0;
+
+       foreach ($query as $emp){
+           if ($emp->idAdmin == \Yii::$app->user->id){
+               $funciona = 1;
+           }
+       }
+
+
+       if ($funciona == 1){
+           return true;
+       }
+       else{
+           return false;
+       }
+
     }
 
     /**

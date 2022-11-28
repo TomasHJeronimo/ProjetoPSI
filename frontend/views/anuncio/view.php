@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use frontend\controllers\AnuncioController;
 
 /** @var yii\web\View $this */
 /** @var common\models\Anuncio $model */
@@ -16,6 +17,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
+        <?php
+            if ($this->context->isUserAuthor()){
+
+
+        ?>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -24,6 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?php
+
+            }
+        ?>
     </p>
 
     <?= DetailView::widget([

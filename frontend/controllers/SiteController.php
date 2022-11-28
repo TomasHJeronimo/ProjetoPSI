@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Anuncio;
 use common\models\Empresa;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
@@ -76,11 +77,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $query = Empresa::find();
-        $empresa = $query->all();
+        $query = Anuncio::find();
+        $anuncio = $query->all();
 
         return $this->render('index', [
-            'empresas' => $empresa,
+            'anuncios' => $anuncio,
         ]);
     }
 
