@@ -42,6 +42,7 @@
                     ['label' => 'Gestão', 'header' => true],
                     ['label' => 'Utilizadores','url' => ['/user/index']],
                     ['label' => 'Categorias','url' => ['/categoria/index']],
+                    ['label' => 'Empresas','url' => ['/empresa/index']],
 
                 ],
             ]);

@@ -276,20 +276,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <div style="margin-top: 50px">
                 <h3>
-                    <u>Contactos</u>
+                    <u>Contactos</u><br>
                 </h3>
 
                 <p>
-                    <b> Telefone: </b> <?= $model->contactoTelefone ?>
+                    <b>&emsp;&emsp; Telefone: </b> <?= $model->contactoTelefone ?>
                 </p>
                 <p>
-                    <b> Telemóvel: </b> <?= $model->contactoTelemovel ?>
+                    <b>&emsp;&emsp; Telemóvel: </b> <?= $model->contactoTelemovel ?>
                 </p>
                 <p>
-                    <b> Email: </b> <?= $model->email ?>
+                    <b>&emsp;&emsp; Email: </b> <?= $model->email ?>
                 </p>
                 <p>
-                    <b> Morada: </b> <?= $model->morada ?>
+                    <b>&emsp;&emsp; Morada: </b> <?= $model->morada ?>
                 </p>
 
             </div>
@@ -299,7 +299,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <u>Sobre nós</u>
                 </h3>
                 <p>
-                    <?php echo $model->descricao ?>
+                   <?php echo $model->descricao ?>
                 </p>
             </div>
 
