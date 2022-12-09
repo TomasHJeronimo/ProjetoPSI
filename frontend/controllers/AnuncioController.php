@@ -162,7 +162,7 @@ class AnuncioController extends Controller
 
         $items = ArrayHelper::map(Empresa::find()->where(['idAdmin' => \Yii::$app->user->id])->all(), 'id', 'Nome');
         $itemsCategoria = ArrayHelper::map(Categoria::find()->all(), 'id', 'Nome');
-        $query = Empresa::find();
+        $query = Empresa::find()->where(['idAdmin' => \Yii::$app->user->getId()]);
         $empresas = $query->all();
 
         return $this->render('update', [

@@ -178,7 +178,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     }
                                     ?>
                                 </span>
-                                <hr>
+                                <b><hr></b>
                                 <h1>Descrição</h1>
                                 <p>
                                     <?= $model->descricao ?>
