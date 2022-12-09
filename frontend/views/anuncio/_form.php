@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?=
-     $form->field($model, 'id_Empresa')
+    $form->field($model, 'id_Empresa')
         ->dropDownList(
             $items,           // Flat array ('id'=>'label')
             ['prompt'=>'Select...']    // options

@@ -105,8 +105,12 @@ class AnuncioController extends Controller
      */
     public function actionView($id)
     {
+        $query = Empresa::find();
+        $empresas = $query->all();
+
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'empresas' => $empresas,
         ]);
     }
 
@@ -129,10 +133,13 @@ class AnuncioController extends Controller
 
         $items = ArrayHelper::map(Empresa::find()->where(['idAdmin' => \Yii::$app->user->id])->all(), 'id', 'Nome');
         $itemsCategoria = ArrayHelper::map(Categoria::find()->all(), 'id', 'Nome');
+        $query = Empresa::find();
+        $empresas = $query->all();
 
         return $this->render('create', [
             'model' => $model,
             'items' => $items,
+            'empresas' => $empresas,
             'itemsCategoria' => $itemsCategoria,
         ]);
     }
@@ -152,8 +159,17 @@ class AnuncioController extends Controller
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
+
+        $items = ArrayHelper::map(Empresa::find()->where(['idAdmin' => \Yii::$app->user->id])->all(), 'id', 'Nome');
+        $itemsCategoria = ArrayHelper::map(Categoria::find()->all(), 'id', 'Nome');
+        $query = Empresa::find();
+        $empresas = $query->all();
+
         return $this->render('update', [
             'model' => $model,
+            'items' => $items,
+            'empresas' => $empresas,
+            'itemsCategoria' => $itemsCategoria,
         ]);
     }
 
