@@ -68,14 +68,9 @@ $this->params['breadcrumbs'][] = $this->title;
             $query = Empresa::find()->where(['idAdmin' => \Yii::$app->user->id])->count();
 
             if ($query > 0) {
-
-
                 ?>
-
                 <?= Html::a('Nova Oferta', ['create'], ['class' => 'btn btn-success']) ?>
-
                 <?php
-
             }
 
             ?>
@@ -83,13 +78,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
         </p>
 
-        <?php echo $this->render('_search', ['model' => $searchModel,'items' => $items]); ?>
+        <?php echo $this->render('_search', ['model' => $searchModel,'items' => $items, 'empresas' => $empresas]); ?>
 
 
         <?= ListView::widget([
             'dataProvider' => $dataProvider,
             'itemView' => '_anuncio',
         ]); ?>
+
+
 
 
     </div>

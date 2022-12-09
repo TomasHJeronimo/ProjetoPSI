@@ -1,5 +1,6 @@
 <?php
 
+use kartik\select2\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -10,21 +11,36 @@ use yii\widgets\ActiveForm;
 
 <div class="anuncio-search">
 
+
+
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
 
     <div class="row">
-        <div class="col-md-2"> <?= $form->field($model, 'id') ?></div>
         <div class="col-md-2"> <?= $form->field($model, 'titulo') ?></div>
         <div class="col-md-2"> <?=
-            $form->field($model, 'categoria')
-                ->dropDownList(
-                    $items,           // Flat array ('id'=>'label')
-                    ['prompt' => 'Select...']    // options
-                );
-            ?> </div>
+            $form->field($model, 'categoria')->widget(Select2::className(),[
+                    'data' => $items,
+                'language' => 'pt',
+                'options' => ['placeholder' => 'Todas'],
+                'pluginOptions' => ['allowClear' => true],
+            ]);
+            ?>
+        </div>
+        <div class="col-md-2">
+            <?=
+             $form->field($model, 'id_Empresa')->widget(Select2::classname(), [
+                'data' => $empresas,
+                'language' => 'pt',
+                'options' => ['placeholder' => 'Todas'],
+                'pluginOptions' => [
+                    'allowClear' => true
+                ],
+            ]);
+            ?>
+        </div>
     </div>
 
     <div class="form-group">

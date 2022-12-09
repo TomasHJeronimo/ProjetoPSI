@@ -87,11 +87,13 @@ class AnuncioController extends Controller
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         $items = ArrayHelper::map(Categoria::find()->all(), 'id', 'Nome');
+        $empresas = ArrayHelper::map(Empresa::find()->all(), 'id', 'Nome');
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'items' => $items,
+            'empresas' => $empresas,
         ]);
     }
 
