@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Nov-2022 às 17:18
+-- Tempo de geração: 20-Dez-2022 às 19:07
 -- Versão do servidor: 10.4.25-MariaDB
--- versão do PHP: 8.1.10
+-- versão do PHP: 8.0.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -64,7 +64,7 @@ CREATE TABLE `auth_assignment` (
 
 INSERT INTO `auth_assignment` (`item_name`, `user_id`, `created_at`) VALUES
 ('admin', '1', 1668700944),
-('common_user', '2', 1668700944);
+('admin', '6', 1668700944);
 
 -- --------------------------------------------------------
 
@@ -173,7 +173,7 @@ CREATE TABLE `empresa` (
   `id` int(11) NOT NULL,
   `idAdmin` int(11) NOT NULL,
   `Nome` varchar(50) NOT NULL,
-  `descricao` text NOT NULL,
+  `descricao` varchar(999) NOT NULL,
   `contactoTelefone` int(9) DEFAULT NULL,
   `contactoTelemovel` int(9) DEFAULT NULL,
   `morada` varchar(75) NOT NULL,
@@ -185,10 +185,25 @@ CREATE TABLE `empresa` (
 --
 
 INSERT INTO `empresa` (`id`, `idAdmin`, `Nome`, `descricao`, `contactoTelefone`, `contactoTelemovel`, `morada`, `email`) VALUES
-(1, 1, 'Empresa 1', '<p>Descri&ccedil;&atilde;o da empresa 1</p>\r\n\r\n<p>Teste da formata&ccedil;&atilde;o do texto da empresa 1</p>\r\n\r\n<ul>\r\n	<li>-Teste Linguagens de programa&ccedil;&atilde;o\r\n	<ul>\r\n		<li>-Java</li>\r\n		<li>-C#</li>\r\n		<li>-PHP</li>\r\n		<li>-CSS</li>\r\n		<li>-Python</li>\r\n	</ul>\r\n	</li>\r\n</ul>\r\n', 912345678, 261121212, 'morada da empresa1', 'empresa1@outlook.pt'),
+(1, 1, 'Empresa 1', 'Descrição da empresa 1\r\n\r\nTeste da formatação do texto da empresa 1\r\n     -Teste\r\n\r\nLinguagens de programação\r\n     -Java\r\n     -C#\r\n     -PHP\r\n     -CSS\r\n     -Python\r\n', 912345678, 261121212, 'morada da empresa1', 'empresa1@outlook.pt'),
 (2, 2, 'Empresa do user 2', 'Descrição da empresa 2 \r\nTeste da formatação do texto da empresa 1\r\n -Teste Linguagens de programação \r\n-Java \r\n-C# \r\n-PHP \r\n-CSS \r\n-Python', 912345678, 216121212, 'Morada da Empresa 2', 'empresa2@outlook.pt'),
 (3, 1, 'IPL', '<p>Empresa 2</p>\r\n\r\n<hr />\r\n<p>Skills necess&aacute;rias</p>\r\n\r\n<ol>\r\n	<li>C#</li>\r\n	<li>Java</li>\r\n	<li>PHP</li>\r\n	<li>Python</li>\r\n</ol>\r\n', 918782326, NULL, 'Travessa da FOnte', 'pedromonteiroescola@outlook.pt'),
 (4, 1, 'Empresa Teste', '<ul>\r\n	<li>Empresa</li>\r\n</ul>\r\n\r\n<ol>\r\n	<li>Something in Empresa</li>\r\n	<li>Something else in empresa\r\n	<ol>\r\n		<li>Something in point 2</li>\r\n	</ol>\r\n	</li>\r\n</ol>\r\n', 918782326, 261212121, 'Morada da Empresa Teste', 'empresateste@hotmail.pt');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `expprofissionais`
+--
+
+CREATE TABLE `expprofissionais` (
+  `experiencias` varchar(700) NOT NULL,
+  `referencias` varchar(100) NOT NULL,
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `categoria_id` int(11) NOT NULL,
+  `titulo` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -229,7 +244,7 @@ CREATE TABLE `user` (
   `password_reset_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `status` smallint(6) NOT NULL DEFAULT 10,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
   `verification_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -239,9 +254,13 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`, `verification_token`) VALUES
-(1, 'Monteiro', 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U', '$2y$13$bRLIsUjr77FnSFGPyrMpXOiWkRiwLq4R/xf9SJfKGz8H9w76/.73m', NULL, 'monteiro@outlook.pt', 10, '0000-00-00 00:00:00', 1668696456, '5oclOf00qQai7068dpBCkG_OIEBGVAsY_1668696456'),
-(2, 'MonteiroComum', 'PDb3Lrlo5CDrVybqK_3DKAN0mJt5srVl', '$2y$13$aWxw/t9hjrE1jBmp2TN6P.4/9ne30dN9veFP6DBUOtXcfNSCHU.rK', NULL, 'MonteiroComum@outlook.pt', 10, '0000-00-00 00:00:00', 1668701014, 'N_YleDaQF28aELpnKfjjjCxKX7Mfw2k__1668701014'),
-(11, 'some', '1xPAZwdZtBx0_FC5cD4FLQw3xKpkyzT6', '$2y$13$8R4FrYz/4xyhU2CfQxDjaOfyIZFsKo3Eq9.O9avEXK1OFkTlrnCUy', NULL, 'some@some.pt', 10, '0000-00-00 00:00:00', 1669649559, 'xa49VurA1lZEa3KuaUrsyKZ2T_-XCV4V_1669649559');
+(1, 'Monteiro', 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U', '$2y$13$bRLIsUjr77FnSFGPyrMpXOiWkRiwLq4R/xf9SJfKGz8H9w76/.73m', NULL, 'monteiro@outlook.pt', 10, 1668696456, 1668696456, '5oclOf00qQai7068dpBCkG_OIEBGVAsY_1668696456'),
+(2, 'MonteiroComum', 'PDb3Lrlo5CDrVybqK_3DKAN0mJt5srVl', '$2y$13$aWxw/t9hjrE1jBmp2TN6P.4/9ne30dN9veFP6DBUOtXcfNSCHU.rK', NULL, 'MonteiroComum@outlook.pt', 10, 1668701014, 1668701014, 'N_YleDaQF28aELpnKfjjjCxKX7Mfw2k__1668701014'),
+(5, 'MonteiroAdmin', 'xeFqgQtXAM4NBwGkrO8tYo13Bbo380wV', '$2y$13$.WWzoGAHGnQ8Ft/9K5J1du/E.SpjHanclerQb1vsoBYkDLfTLgky6', NULL, 'MonteiroAdmin@admin.pt', 10, 1669040611, 1669040611, 'yo_nCpwGeVqlBg40Gh9g0CuB9PYl6Qgd_1669040611'),
+(6, 'Tomas', '6qV0TwUDpGja4RAH-amisncx_6tUDMeZ', '$2y$13$O8nIN4FEYpNSv09teu7IQut2LGoUxIwjYRHBGb31d.X7SQyF/l6Mu', NULL, 'tomas_h.jeronimo@hotmail.com', 10, 1669114386, 1669114386, 'p52UMiMF1yoeBf1omPad4xK57b3uaaI6_1669114386'),
+(7, 'TomasComum', '2yKBFobP1EdUt9c2CVggfHEKuDkMSmq_', '$2y$13$PHWVKJM0OYRniNxevDsHSu/RcvtYRoCg7NK6UYCD7iOHFrEcBNChK', NULL, 'tomashjeronimo@gmail.com', 10, 1669130284, 1669130284, '6DX3afeJo58uAohzX6bTwUCtE0WvqVjE_1669130284'),
+(8, 'rita', 'A5nl0CSBGuqMmADsHIIxkLIqxF3j66_J', '$2y$13$nXRVcuJCAFnzXpsko1vvmexZQQZup/uLJXp6beFBrUOvk0Vd3X6LW', NULL, 'rita12345678@gmail.com', 10, 1669206325, 1669206325, 'p3i-HegRmaH6A1yR12I80lgqQ60No1KY_1669206325'),
+(9, 'xico', '35WAlFCrN112VV6haMdMbB0nsxTAcOdZ', '$2y$13$EiYuvuPRrqf8yvu.YLW.Wea3QBVK17Cher.rJYgMRFjjYTi0C30Qe', NULL, 'xico12345678@gmail.com', 10, 1669206519, 1669206519, 'hYucwEKAVgvCHDlp1geEzf52LlcMTbQP_1669206519');
 
 --
 -- Índices para tabelas despejadas
@@ -301,6 +320,12 @@ ALTER TABLE `empresa`
   ADD KEY `id` (`idAdmin`);
 
 --
+-- Índices para tabela `expprofissionais`
+--
+ALTER TABLE `expprofissionais`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `migration`
 --
 ALTER TABLE `migration`
@@ -342,6 +367,12 @@ ALTER TABLE `categoria`
 --
 ALTER TABLE `empresa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de tabela `expprofissionais`
+--
+ALTER TABLE `expprofissionais`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `user`

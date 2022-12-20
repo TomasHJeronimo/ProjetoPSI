@@ -103,10 +103,6 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="col-md-12"><label class="labels">Name</label><input type="text" readonly="true" class="form-control" placeholder="<?= $model->username ?>" value=""></div>
                         <div class="col-md-12"><label class="labels">Password</label><input type="password" readonly="true" class="form-control" placeholder="" value="<?= $model->password_hash ?>"></div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6"><label class="labels">País</label><input type="text" readonly="true" class="form-control"  value="Em Desenvolvimento"></div>
-                        <div class="col-md-6"><label class="labels">Região</label><input type="text" readonly="true" class="form-control" value="Em Desenvolvimento"></div>
-                    </div>
                     <div class="mt-4 text-center">
                         <?= Html::a('Alterar Dados', ['update', 'id' => $model->id], ['class' => 'btn btn-primary profile-button']) ?>
                     </div>

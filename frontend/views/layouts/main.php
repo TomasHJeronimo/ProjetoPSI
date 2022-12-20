@@ -47,6 +47,7 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Minhas Empresas', 'url' => ['/empresa/index']];
         $menuItems[] = ['label' => 'Perfil', 'url' => ['/user/view' , 'id'=>Yii::$app->getUser()->id]];
 
+
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
             . Html::submitButton(
