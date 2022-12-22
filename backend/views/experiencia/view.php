@@ -4,14 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var common\models\ExpProfissionais $model */
+/** @var common\models\Experiencia $model */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Exp Profissionais', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Experiencias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="exp-profissionais-view">
+<div class="experiencia-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,12 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'experiencias',
-            'referencias',
             'id',
-            'user_id',
-            'categoria_id',
+            'idUser',
             'titulo',
+            'descricao',
+            'categoria',
+            'data_inicio',
+            'data_fim',
         ],
     ]) ?>
 

@@ -22,32 +22,37 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php
 
     if (Yii::$app->getUser()->id != $model->id){
-      // throw new \yii\web\ForbiddenHttpException('Accesso Negado');
+        // throw new \yii\web\ForbiddenHttpException('Accesso Negado');
     }
     else
-        {
+    {
     ?>
 
     <style>
-        #vertudo{
+        #vertudo {
             text-decoration: none;
         }
-        .mt-5{
+
+        .mt-5 {
             padding-top: 0 !important;
             margin-top: 0 !important;
         }
+
         p {
             overflow: hidden;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical
         }
+
         #GFG {
             text-decoration: none;
         }
-        .container{
+
+        .container {
             width: 1720px;
         }
+
         .form-control:focus {
             box-shadow: none;
             border-color: #BA68C8
@@ -90,125 +95,101 @@ $this->params['breadcrumbs'][] = $this->title;
         }
     </style>
 
-        <div class="row">
-            <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold"><?= $model->username ?></span><span class="text-black-50"> <?= $model->email ?> </span><span> </span></div>
-            </div>
-            <div class="col-md-5 border-right">
-                <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Profile Settings</h4>
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-md-12"><label class="labels">Name</label><input type="text" readonly="true" class="form-control" placeholder="<?= $model->username ?>" value=""></div>
-                        <div class="col-md-12"><label class="labels">Password</label><input type="password" readonly="true" class="form-control" placeholder="" value="<?= $model->password_hash ?>"></div>
-                    </div>
-                    <div class="mt-4 text-center">
-                        <?= Html::a('Alterar Dados', ['update', 'id' => $model->id], ['class' => 'btn btn-primary profile-button']) ?>
-                    </div>
-
-
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
+                                                                                         width="150px"
+                                                                                         src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span
+                        class="font-weight-bold"><?= $model->username ?></span><span
+                        class="text-black-50"> <?= $model->email ?> </span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
                 </div>
+                <div class="row mt-2">
+                    <div class="col-md-12"><label class="labels">Name</label><input type="text" readonly="true"
+                                                                                    class="form-control"
+                                                                                    placeholder="<?= $model->username ?>"
+                                                                                    value=""></div>
+                    <div class="col-md-12"><label class="labels">Password</label><input type="password" readonly="true"
+                                                                                        class="form-control"
+                                                                                        placeholder=""
+                                                                                        value="<?= $model->password_hash ?>">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">País</label><input type="text" readonly="true"
+                                                                                   class="form-control"
+                                                                                   value="Em Desenvolvimento"></div>
+                    <div class="col-md-6"><label class="labels">Região</label><input type="text" readonly="true"
+                                                                                     class="form-control"
+                                                                                     value="Em Desenvolvimento"></div>
+                </div>
+                <div class="mt-4 text-center">
+                    <?= Html::a('Alterar Dados', ['update', 'id' => $model->id], ['class' => 'btn btn-primary profile-button']) ?>
+                </div>
+
+
             </div>
-            <div class="col-md-4">
-                <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center experience"><span>Experiências profissionais</span><?= Html::a('<span>Adicionar uma Experiência</span>', ['create'], ['id' => 'GFG','class' => 'border px-3 p-1 add-experience'])?></span></div><br>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center experience"><span>Experiências profissionais</span><?= Html::a('<span>Adicionar uma Experiência</span>', ['experiencia/create'], ['id' => 'GFG', 'class' => 'border px-3 p-1 add-experience']) ?></span>
+                </div>
+                <br>
+
+
+                <?php
+                foreach ($experiencias as $experiencia) {
+                    ?>
                     <div class="card mt-5 border-5 pt-2 active pb-0 px-3">
                         <div class="card-body ">
                             <div class="row">
                                 <div class="col-12">
-                                    <h4 class="card-title "><b>Experiência 1</b></h4>
+                                    <h4 class="card-title "><b><?= $experiencia->titulo ?></b></h4>
 
                                 </div>
                                 <div class="col-12">
                                     <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        <?= $experiencia->descricao ?>
                                     </p>
                                 </div>
                             </div>
 
                         </div>
 
-                        <div class="card-footer bg-white px-0 ">
+                        <div class="card-footer bg-white px-0">
                             <div class="row">
+                                <div class="col-md-auto">
+                                    <img src="https://img.icons8.com/search" width="19" height="19">
+                                    <?= Html::a('<small>Ver Experiencia</small>', ['experiencia/view', 'id' => $experiencia->id], ['id' => 'GFG', 'class' => 'btn btn-outlined btn-black text-muted bg-transparent','data-wow-delay' => "0.7s"]) ?>
+                                </div>
                                 <div class=" col-md-auto ">
-                                    <a href="#" class="btn btn-outlined btn-black text-muted bg-transparent"
-                                       data-wow-delay="0.7s"><img src="https://img.icons8.com/ios/50/000000/settings.png"
-                                                                  width="19" height="19"> <small>Alterar</small></a>
-
-                                    <i class="mdi mdi-settings-outline"></i>
-
+                                    <img src="https://img.icons8.com/ios/50/000000/settings.png" width="19" height="19">
+                                    <?= Html::a('<small>Alterar Experiencia</small>', ['experiencia/update', 'id' => $experiencia->id], ['id' => 'GFG', 'class' => 'btn btn-outlined btn-black text-muted bg-transparent','data-wow-delay' => "0.7s"]) ?>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card mt-5 border-5 pt-2 active pb-0 px-3" style="margin-top: 10px !important;">
-                        <div class="card-body ">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h4 class="card-title "><b>Experiência 1</b></h4>
+                    <br>
+                    <?php
+                }
+                ?>
 
-                                </div>
-                                <div class="col-12">
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                    </p>
-                                </div>
-                            </div>
 
-                        </div>
-
-                        <div class="card-footer bg-white px-0 ">
-                            <div class="row">
-                                <div class=" col-md-auto ">
-                                    <a href="#" class="btn btn-outlined btn-black text-muted bg-transparent"
-                                       data-wow-delay="0.7s"><img src="https://img.icons8.com/ios/50/000000/settings.png" width="19" height="19"> <small>Alterar</small></a>
-
-                                    <i class="mdi mdi-settings-outline"></i>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-5 border-5 pt-2 active pb-0 px-3" style="margin-top: 10px !important;">
-                        <div class="card-body ">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h4 class="card-title "><b>Experiência 1</b></h4>
-
-                                </div>
-                                <div class="col-12">
-                                    <p>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="card-footer bg-white px-0 ">
-                            <div class="row">
-                                <div class=" col-md-auto ">
-                                    <a href="#" class="btn btn-outlined btn-black text-muted bg-transparent"
-                                       data-wow-delay="0.7s"><img src="https://img.icons8.com/ios/50/000000/settings.png" width="19" height="19"> <small>Alterar</small></a>
-
-                                    <i class="mdi mdi-settings-outline"></i>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <span style="display: table;margin: 0 auto"><?= Html::a('Ver tudo...', ['view', 'id'=>Yii::$app->getUser()->id], ['class' => 'btn btn-primary']); ?></span>
             </div>
+            <span style="display: table;margin: 0 auto"><?= Html::a('Ver todas as experiencias...', ['view', 'id' => Yii::$app->getUser()->id], ['class' => 'btn btn-primary']); ?></span>
         </div>
     </div>
 </div>
+    </div>
 
-</div>
+    </div>
 
 <?php
 
 }
 
-            ?>
+?>

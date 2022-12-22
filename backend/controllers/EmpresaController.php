@@ -2,8 +2,10 @@
 
 namespace backend\controllers;
 
+use common\models\Anuncio;
 use common\models\Empresa;
 use backend\models\EmpresaSearch;
+use yii\db\StaleObjectException;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -114,6 +116,8 @@ class EmpresaController extends Controller
      */
     public function actionDelete($id)
     {
+        //ActiveSubject::deleteAll(['clientid' => $clientid]);
+
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -134,4 +138,5 @@ class EmpresaController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
 }

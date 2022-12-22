@@ -76,6 +76,7 @@ class UserController extends Controller
     public function actionCreate()
     {
         $model = new User();
+        $model->created_at = date('yyyy-mm-dd',time());
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -93,7 +94,6 @@ class UserController extends Controller
     public function getUsername($id)
     {
         $model = User::find()->where(['id' => $id]);
-
         return $model;
     }
 

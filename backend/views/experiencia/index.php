@@ -1,24 +1,24 @@
 <?php
 
-use common\models\ExpProfissionais;
+use common\models\Experiencia;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var frontend\models\ExpProfissionaisSearch $searchModel */
+/** @var app\models\ExperienciaSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Exp Profissionais';
+$this->title = 'Experiencias';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="exp-profissionais-index">
+<div class="experiencia-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Exp Profissionais', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Experiencia', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -29,15 +29,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'experiencias',
-            'referencias',
             'id',
-            'user_id',
-            'categoria_id',
-            //'titulo',
+            'idUser',
+            'titulo',
+            'descricao',
+            'categoria',
+            //'data_inicio',
+            //'data_fim',
             [
                 'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, ExpProfissionais $model, $key, $index, $column) {
+                'urlCreator' => function ($action, Experiencia $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                  }
             ],

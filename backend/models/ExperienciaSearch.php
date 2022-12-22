@@ -1,15 +1,15 @@
 <?php
 
-namespace frontend\models;
+namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\ExpProfissionais;
+use common\models\Experiencia;
 
 /**
- * ExpProfissionaisSearch represents the model behind the search form of `common\models\ExpProfissionais`.
+ * ExperienciaSearch represents the model behind the search form of `common\models\Experiencia`.
  */
-class ExpProfissionaisSearch extends ExpProfissionais
+class ExperienciaSearch extends Experiencia
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class ExpProfissionaisSearch extends ExpProfissionais
     public function rules()
     {
         return [
-            [['experiencias', 'referencias', 'titulo'], 'safe'],
-            [['id', 'user_id', 'categoria_id'], 'integer'],
+            [['id', 'idUser', 'categoria'], 'integer'],
+            [['titulo', 'descricao', 'data_inicio', 'data_fim'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class ExpProfissionaisSearch extends ExpProfissionais
      */
     public function search($params)
     {
-        $query = ExpProfissionais::find();
+        $query = Experiencia::find();
 
         // add conditions that should always apply here
 
@@ -59,13 +59,14 @@ class ExpProfissionaisSearch extends ExpProfissionais
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'user_id' => $this->user_id,
-            'categoria_id' => $this->categoria_id,
+            'idUser' => $this->idUser,
+            'categoria' => $this->categoria,
+            'data_inicio' => $this->data_inicio,
+            'data_fim' => $this->data_fim,
         ]);
 
-        $query->andFilterWhere(['like', 'experiencias', $this->experiencias])
-            ->andFilterWhere(['like', 'referencias', $this->referencias])
-            ->andFilterWhere(['like', 'titulo', $this->titulo]);
+        $query->andFilterWhere(['like', 'titulo', $this->titulo])
+            ->andFilterWhere(['like', 'descricao', $this->descricao]);
 
         return $dataProvider;
     }

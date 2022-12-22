@@ -1,17 +1,17 @@
 <?php
 
-namespace frontend\controllers;
+namespace backend\controllers;
 
-use common\models\Candidatura;
-use frontend\models\CandidaturaSearch;
+use common\models\Experiencia;
+use app\models\ExperienciaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * CandidaturaController implements the CRUD actions for Candidatura model.
+ * ExperienciaController implements the CRUD actions for Experiencia model.
  */
-class CandidaturaController extends Controller
+class ExperienciaController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,13 +32,13 @@ class CandidaturaController extends Controller
     }
 
     /**
-     * Lists all Candidatura models.
+     * Lists all Experiencia models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new CandidaturaSearch();
+        $searchModel = new ExperienciaSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +48,7 @@ class CandidaturaController extends Controller
     }
 
     /**
-     * Displays a single Candidatura model.
+     * Displays a single Experiencia model.
      * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -61,13 +61,13 @@ class CandidaturaController extends Controller
     }
 
     /**
-     * Creates a new Candidatura model.
+     * Creates a new Experiencia model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new Candidatura();
+        $model = new Experiencia();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -83,7 +83,7 @@ class CandidaturaController extends Controller
     }
 
     /**
-     * Updates an existing Candidatura model.
+     * Updates an existing Experiencia model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return string|\yii\web\Response
@@ -103,7 +103,7 @@ class CandidaturaController extends Controller
     }
 
     /**
-     * Deletes an existing Candidatura model.
+     * Deletes an existing Experiencia model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return \yii\web\Response
@@ -117,15 +117,15 @@ class CandidaturaController extends Controller
     }
 
     /**
-     * Finds the Candidatura model based on its primary key value.
+     * Finds the Experiencia model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return Candidatura the loaded model
+     * @return Experiencia the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Candidatura::findOne(['id' => $id])) !== null) {
+        if (($model = Experiencia::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

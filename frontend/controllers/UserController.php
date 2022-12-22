@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\models\Experiencia;
 use common\models\User;
 use frontend\models\UserSearch;
 use yii\filters\AccessControl;
@@ -84,6 +85,9 @@ class UserController extends Controller
      */
     public function actionView($id)
     {
+        $query = Experiencia::find()->where(['iduser' => \Yii::$app->user->id])->limit(3);
+        $experiencias = $query->all();
+
         if (\Yii::$app->getUser()->id != $id){
             return $this->render('error', [
                 'model' => $this->findModel($id),
@@ -92,6 +96,7 @@ class UserController extends Controller
         else{
             return $this->render('view', [
                 'model' => $this->findModel($id),
+                'experiencias' => $experiencias,
             ]);
         }
     }

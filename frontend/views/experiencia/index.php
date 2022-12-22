@@ -1,24 +1,24 @@
 <?php
 
-use common\models\Candidatura;
+use common\models\Experiencia;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var app\models\CandidaturaSearch $searchModel */
+/** @var app\models\ExperienciaSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Candidaturas';
+$this->title = 'Experiencias';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="candidatura-index">
+<div class="experiencia-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Candidatura', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Experiencia', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -30,13 +30,15 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'id_user',
-            'id_anuncio',
-            'mensagem:ntext',
-            'data_candidatura',
+            'idUser',
+            'titulo',
+            'descricao',
+            'categoria',
+            //'data_inicio',
+            //'data_fim',
             [
                 'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Candidatura $model, $key, $index, $column) {
+                'urlCreator' => function ($action, Experiencia $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                  }
             ],

@@ -1,17 +1,17 @@
 <?php
 
-namespace frontend\controllers;
+namespace backend\controllers;
 
-use common\models\ExpProfissionais;
-use frontend\models\ExpProfissionaisSearch;
+use common\models\Anuncio;
+use app\models\AnuncioSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ExpProfissionaisController implements the CRUD actions for ExpProfissionais model.
+ * AnuncioController implements the CRUD actions for Anuncio model.
  */
-class ExpProfissionaisController extends Controller
+class AnuncioController extends Controller
 {
     /**
      * @inheritDoc
@@ -32,13 +32,13 @@ class ExpProfissionaisController extends Controller
     }
 
     /**
-     * Lists all ExpProfissionais models.
+     * Lists all Anuncio models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new ExpProfissionaisSearch();
+        $searchModel = new AnuncioSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +48,7 @@ class ExpProfissionaisController extends Controller
     }
 
     /**
-     * Displays a single ExpProfissionais model.
+     * Displays a single Anuncio model.
      * @param int $id ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -61,13 +61,13 @@ class ExpProfissionaisController extends Controller
     }
 
     /**
-     * Creates a new ExpProfissionais model.
+     * Creates a new Anuncio model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new ExpProfissionais();
+        $model = new Anuncio();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -83,7 +83,7 @@ class ExpProfissionaisController extends Controller
     }
 
     /**
-     * Updates an existing ExpProfissionais model.
+     * Updates an existing Anuncio model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id ID
      * @return string|\yii\web\Response
@@ -103,7 +103,7 @@ class ExpProfissionaisController extends Controller
     }
 
     /**
-     * Deletes an existing ExpProfissionais model.
+     * Deletes an existing Anuncio model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id ID
      * @return \yii\web\Response
@@ -117,15 +117,15 @@ class ExpProfissionaisController extends Controller
     }
 
     /**
-     * Finds the ExpProfissionais model based on its primary key value.
+     * Finds the Anuncio model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id ID
-     * @return ExpProfissionais the loaded model
+     * @return Anuncio the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = ExpProfissionais::findOne(['id' => $id])) !== null) {
+        if (($model = Anuncio::findOne(['id' => $id])) !== null) {
             return $model;
         }
 

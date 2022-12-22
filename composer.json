@@ -22,7 +22,10 @@
         "2amigos/yii2-ckeditor-widget" : "~2.1",
         "kv4nt/yii2-owl-carousel2": "*",
         "rmrevin/yii2-fontawesome": "2.10.*",
-        "kartik-v/yii2-widget-select2": "@dev"
+        "kartik-v/yii2-widget-select2": "@dev",
+        "kartik-v/yii2-widget-datetimepicker": "*",
+        "kartik-v/yii2-widget-datepicker": "dev-master",
+        "onmotion/yii2-widget-apexcharts": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

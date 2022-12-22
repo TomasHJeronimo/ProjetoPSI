@@ -1,9 +1,17 @@
+<?php
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\grid\ActionColumn;
+use yii\grid\GridView;
+
+
+?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-        <img src="<?=$assetDir?>/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
+    <?= Html::a('<img src="'.  $assetDir . '/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">AdminLTE 3</span>', ['site/index'], ['class' => 'brand-link']) ?>
+
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -43,6 +51,8 @@
                     ['label' => 'Utilizadores','url' => ['/user/index']],
                     ['label' => 'Categorias','url' => ['/categoria/index']],
                     ['label' => 'Empresas','url' => ['/empresa/index']],
+                    ['label' => 'Ofertas','url' => ['/anuncio/index']],
+                    ['label' => 'Experiencias','url' => ['/experiencia/index']],
 
                 ],
             ]);

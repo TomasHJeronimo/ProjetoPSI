@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Candidatura;
+use common\models\ExpProfissional;
 
 /**
- * CandidaturaSearch represents the model behind the search form of `common\models\Candidatura`.
+ * ExpProfissionalSearch represents the model behind the search form of `common\models\ExpProfissional`.
  */
-class CandidaturaSearch extends Candidatura
+class ExpProfissionalSearch extends ExpProfissional
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class CandidaturaSearch extends Candidatura
     public function rules()
     {
         return [
-            [['id', 'id_user', 'id_anuncio'], 'integer'],
-            [['mensagem', 'data_candidatura'], 'safe'],
+            [['id', 'idUser', 'id_categoria'], 'integer'],
+            [['titulo', 'descricao', 'data_inicio', 'data_fim'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class CandidaturaSearch extends Candidatura
      */
     public function search($params)
     {
-        $query = Candidatura::find();
+        $query = ExpProfissional::find();
 
         // add conditions that should always apply here
 
@@ -59,12 +59,14 @@ class CandidaturaSearch extends Candidatura
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'id_user' => $this->id_user,
-            'id_anuncio' => $this->id_anuncio,
-            'data_candidatura' => $this->data_candidatura,
+            'idUser' => $this->idUser,
+            'id_categoria' => $this->id_categoria,
+            'data_inicio' => $this->data_inicio,
+            'data_fim' => $this->data_fim,
         ]);
 
-        $query->andFilterWhere(['like', 'mensagem', $this->mensagem]);
+        $query->andFilterWhere(['like', 'titulo', $this->titulo])
+            ->andFilterWhere(['like', 'descricao', $this->descricao]);
 
         return $dataProvider;
     }
