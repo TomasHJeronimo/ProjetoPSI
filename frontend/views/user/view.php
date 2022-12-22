@@ -180,7 +180,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
             </div>
-            <span style="display: table;margin: 0 auto"><?= Html::a('Ver todas as experiencias...', ['view', 'id' => Yii::$app->getUser()->id], ['class' => 'btn btn-primary']); ?></span>
+            <span style="display: table;margin: 0 auto"><?= Html::a('Ver todas as experiencias...', ['experiencia/index'], ['class' => 'btn btn-primary']); ?></span>
         </div>
     </div>
 </div>

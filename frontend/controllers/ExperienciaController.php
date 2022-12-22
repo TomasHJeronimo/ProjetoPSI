@@ -41,7 +41,7 @@ class ExperienciaController extends Controller
     public function actionIndex()
     {
         $searchModel = new ExperienciaSearch();
-        $dataProvider = $searchModel->search($this->request->queryParams);
+        $dataProvider = $searchModel->searchMinhas($this->request->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,

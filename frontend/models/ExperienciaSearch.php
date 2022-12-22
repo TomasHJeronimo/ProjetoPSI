@@ -70,4 +70,37 @@ class ExperienciaSearch extends Experiencia
 
         return $dataProvider;
     }
+
+    public function searchMinhas($params)
+    {
+        $query = Experiencia::find()->where(['iduser' => \Yii::$app->user->id]);
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        // grid filtering conditions
+        $query->andFilterWhere([
+            'id' => $this->id,
+            'idUser' => $this->idUser,
+            'categoria' => $this->categoria,
+            'data_inicio' => $this->data_inicio,
+            'data_fim' => $this->data_fim,
+        ]);
+
+        $query->andFilterWhere(['like', 'titulo', $this->titulo])
+            ->andFilterWhere(['like', 'descricao', $this->descricao]);
+
+        return $dataProvider;
+    }
 }
