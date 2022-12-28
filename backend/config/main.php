@@ -12,7 +12,11 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'api' => [
+            'class' => 'app\modules\api\ModuleAPI',
+        ],
+    ],
     'components' => [
 
         'request' => [
@@ -44,6 +48,13 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/user',
+                    'extraPatterns' => [
+                        'GET count' => 'count'
+                    ]
+                ],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'api/anuncio'],
             ],
         ],
 
