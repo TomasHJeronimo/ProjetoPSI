@@ -21,6 +21,9 @@ return [
 
         'request' => [
             'csrfParam' => '_csrf-backend',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ]
         ],
         'user' => [
             'identityClass' => 'common\models\User',
@@ -51,10 +54,17 @@ return [
                 [
                     'class' => 'yii\rest\UrlRule', 'controller' => 'api/user',
                     'extraPatterns' => [
-                        'GET count' => 'count'
+                        'GET count' => 'count',
                     ]
                 ],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'api/anuncio'],
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/auth',
+                    'extraPatterns' => [
+                        'GET login' => 'login',
+                        'POST novo' => 'novo',
+                    ]
+                ],
             ],
         ],
 
