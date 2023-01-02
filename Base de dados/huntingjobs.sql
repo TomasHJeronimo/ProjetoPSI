@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21-Dez-2022 às 17:09
+-- Tempo de geração: 03-Jan-2023 às 00:41
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -42,7 +42,6 @@ CREATE TABLE `anuncio` (
 
 INSERT INTO `anuncio` (`id`, `id_Empresa`, `titulo`, `descricao`, `perfil_procurado`, `categoria`) VALUES
 (1, 1, 'Titulo1', 'Descricao 1', 'perfil 1', 0),
-(2, 4, 'Tituloteste', 'Tituloteste', 'Tituloteste', 0),
 (3, 1, 'Titulo1', 'Titulo1', 'Titulo1', 2),
 (4, 1, 'Programador C#', '<p>Programador C#</p>\r\n\r\n<hr />\r\n<ul>\r\n	<li>Skill1</li>\r\n	<li>Skill2</li>\r\n	<li>Skill3</li>\r\n</ul>\r\n', '<p>Programador C#</p>\r\n', 1);
 
@@ -64,7 +63,10 @@ CREATE TABLE `auth_assignment` (
 
 INSERT INTO `auth_assignment` (`item_name`, `user_id`, `created_at`) VALUES
 ('admin', '1', 1668700944),
-('common_user', '2', 1668700944);
+('common_user', '2', 1668700944),
+('common_user', '31', 1672600391),
+('common_user', '32', 1672600612),
+('common_user', '34', 1672600855);
 
 -- --------------------------------------------------------
 
@@ -186,9 +188,7 @@ CREATE TABLE `empresa` (
 
 INSERT INTO `empresa` (`id`, `idAdmin`, `Nome`, `descricao`, `contactoTelefone`, `contactoTelemovel`, `morada`, `email`) VALUES
 (1, 1, 'Empresa 1', '<p>Descri&ccedil;&atilde;o da empresa 1</p>\r\n\r\n<p>Teste da formata&ccedil;&atilde;o do texto da empresa 1</p>\r\n\r\n<ul>\r\n	<li>-Teste Linguagens de programa&ccedil;&atilde;o\r\n	<ul>\r\n		<li>-Java</li>\r\n		<li>-C#</li>\r\n		<li>-PHP</li>\r\n		<li>-CSS</li>\r\n		<li>-Python</li>\r\n	</ul>\r\n	</li>\r\n</ul>\r\n', 912345678, 261121212, 'morada da empresa1', 'empresa1@outlook.pt'),
-(2, 2, 'Empresa do user 2', 'Descrição da empresa 2 \r\nTeste da formatação do texto da empresa 1\r\n -Teste Linguagens de programação \r\n-Java \r\n-C# \r\n-PHP \r\n-CSS \r\n-Python', 912345678, 216121212, 'Morada da Empresa 2', 'empresa2@outlook.pt'),
-(3, 1, 'IPL', '<p>Empresa 2</p>\r\n\r\n<hr />\r\n<p>Skills necess&aacute;rias</p>\r\n\r\n<ol>\r\n	<li>C#</li>\r\n	<li>Java</li>\r\n	<li>PHP</li>\r\n	<li>Python</li>\r\n</ol>\r\n', 918782326, NULL, 'Travessa da FOnte', 'pedromonteiroescola@outlook.pt'),
-(4, 1, 'Empresa Teste', '<ul>\r\n	<li>Empresa</li>\r\n</ul>\r\n\r\n<ol>\r\n	<li>Something in Empresa</li>\r\n	<li>Something else in empresa\r\n	<ol>\r\n		<li>Something in point 2</li>\r\n	</ol>\r\n	</li>\r\n</ol>\r\n', 918782326, 261212121, 'Morada da Empresa Teste', 'empresateste@hotmail.pt');
+(2, 2, 'Empresa do user 2', 'Descrição da empresa 2 \r\nTeste da formatação do texto da empresa 1\r\n -Teste Linguagens de programação \r\n-Java \r\n-C# \r\n-PHP \r\n-CSS \r\n-Python', 912345678, 216121212, 'Morada da Empresa 2', 'empresa2@outlook.pt');
 
 -- --------------------------------------------------------
 
@@ -211,7 +211,9 @@ CREATE TABLE `experiencia` (
 --
 
 INSERT INTO `experiencia` (`id`, `idUser`, `titulo`, `descricao`, `categoria`, `data_inicio`, `data_fim`) VALUES
-(1, 1, 'Repor produtos no Continente', 'Repor e organizar produtos no continente', 3, '2010-10-10', '2020-11-27');
+(1, 1, 'Programador C#', 'Desenvolvimento de Software costumizado ao gosto do cliente.', 1, '2010-10-10', '2020-11-27'),
+(2, 1, 'Programador WEB', 'Desenvolvimento de um website de loja de roupa Online com a framework PRESTASHOP.\r\nManutenção do stock e produtos da cliente através da conexão á API do software SAGE.', 1, '2022-02-28', '2022-06-26'),
+(3, 1, 'Programação Unity3D', 'Desenvolvimento de um videojogo em 3D usando a plataforma Unity para o museu da Lourinha.\r\nO jogo tinha como objetivo dar uma pequena idea de como era o tempo dos dinossauros ás crianças que visitavam o museu.', 1, '2022-06-21', '2022-07-26');
 
 -- --------------------------------------------------------
 
@@ -252,8 +254,8 @@ CREATE TABLE `user` (
   `password_reset_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `status` smallint(6) NOT NULL DEFAULT 10,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` int(11) NOT NULL,
+  `created_at` date NOT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `verification_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -262,9 +264,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`, `verification_token`) VALUES
-(1, 'Monteiro', 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U', '$2y$13$bRLIsUjr77FnSFGPyrMpXOiWkRiwLq4R/xf9SJfKGz8H9w76/.73m', NULL, 'monteiro@outlook.pt', 10, '0000-00-00 00:00:00', 1668696456, '5oclOf00qQai7068dpBCkG_OIEBGVAsY_1668696456'),
-(2, 'MonteiroComum', 'PDb3Lrlo5CDrVybqK_3DKAN0mJt5srVl', '$2y$13$aWxw/t9hjrE1jBmp2TN6P.4/9ne30dN9veFP6DBUOtXcfNSCHU.rK', NULL, 'MonteiroComum@outlook.pt', 10, '0000-00-00 00:00:00', 1668701014, 'N_YleDaQF28aELpnKfjjjCxKX7Mfw2k__1668701014'),
-(11, 'some', '1xPAZwdZtBx0_FC5cD4FLQw3xKpkyzT6', '$2y$13$8R4FrYz/4xyhU2CfQxDjaOfyIZFsKo3Eq9.O9avEXK1OFkTlrnCUy', NULL, 'some@some.pt', 10, '0000-00-00 00:00:00', 1669649559, 'xa49VurA1lZEa3KuaUrsyKZ2T_-XCV4V_1669649559');
+(1, 'Monteiro', 'umykV5DNWr3yn45LMbyUGGzwtTQd_H_U', '$2y$13$bRLIsUjr77FnSFGPyrMpXOiWkRiwLq4R/xf9SJfKGz8H9w76/.73m', NULL, 'monteiro@outlook.pt', 10, '0000-00-00', '0000-00-00 00:00:00', '5oclOf00qQai7068dpBCkG_OIEBGVAsY_1668696456'),
+(2, 'MonteiroComum', 'PDb3Lrlo5CDrVybqK_3DKAN0mJt5srVl', '$2y$13$aWxw/t9hjrE1jBmp2TN6P.4/9ne30dN9veFP6DBUOtXcfNSCHU.rK', NULL, 'MonteiroComum@outlook.pt', 10, '2022-12-20', '0000-00-00 00:00:00', 'N_YleDaQF28aELpnKfjjjCxKX7Mfw2k__1668701014'),
+(25, 'somethingelse', '5NRxVJQQeX8hH8Aj2NRHRoJ8WGKFPljQ', '$2y$13$0vKepj9TOWfEB5DRXdgsuewZ1EWJWcIC8765JKPzQImU12XuSw29O', NULL, 'something@email.pt', 10, '0000-00-00', '0000-00-00 00:00:00', 'z_Ivo_cTln3X1Fv9ZmQnaq7WDxB7YHPg_1672348787'),
+(28, 'Monteiro2', 'xcfLwlk6chpIDzMp2Qnnzc1eJVIoTqg7', '$2y$13$EVLOQ1uId3ZnksjJKWgrBeHi65uQrWXFVYBP6ljrjiSPXpdeYJhCK', NULL, 'email@email.pt', 10, '0000-00-00', '0000-00-00 00:00:00', 'smT9fNMIr_4FCjv7iLItlOHh9r2w9DCJ_1672350137');
 
 --
 -- Índices para tabelas despejadas
@@ -352,7 +355,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de tabela `anuncio`
 --
 ALTER TABLE `anuncio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `candidatura`
@@ -370,19 +373,19 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de tabela `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `experiencia`
 --
 ALTER TABLE `experiencia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- Restrições para despejos de tabelas
