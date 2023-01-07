@@ -58,12 +58,18 @@ return [
                     ]
                 ],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'api/anuncio'],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'api/empresa'],
                 [
                     'class' => 'yii\rest\UrlRule', 'controller' => 'api/auth',
                     'extraPatterns' => [
-                        'GET login' => 'login',
+                        'POST login' => 'login',
                         'POST novo' => 'novo',
-                    ]
+                        'GET {id}' => '',
+                    ],
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
+                    ],
+
                 ],
             ],
         ],

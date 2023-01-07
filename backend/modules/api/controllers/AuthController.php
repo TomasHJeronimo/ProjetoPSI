@@ -28,7 +28,7 @@ class AuthController extends ActiveController
         $user->created_at = date('yyyy-mm-dd',date(time()));
         $user->status = 10;
 
-        //adicionar common_user ao registar now website
+        //adicionar common_user ao registar no website
         $auth = Yii::$app->authManager;
         $utilizadorComumRole = $auth->getRole('common_user');
 
@@ -47,15 +47,13 @@ class AuthController extends ActiveController
 
         $params = $request->getBodyParams();
 
+
         Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
         $user = User::findByUsername($params['username']);
 
         if ($user && $user->validatePassword($params['password'])){
             return $user;
-        }
-        else{
-            return null;
         }
     }
 

@@ -130,7 +130,7 @@ $this->title = 'HuntingJob';
         <div class="jumbotron text-center bg-transparent">
             <h1 class="display-4">Bem vindo!</h1>
             <p class="lead">Começa a procurar ofertas de empregos de várias categorias.</p>
-            <?= Html::a('Ver Todos os Anuncios...', ['index'], ['class' => 'btn btn-primary']) ?>
+            <?= Html::a('Ver Todos os Anuncios...', ['anuncio/index'], ['class' => 'btn btn-primary']) ?>
         </div>
 
         <?php
