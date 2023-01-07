@@ -57,19 +57,28 @@ return [
                         'GET count' => 'count',
                     ]
                 ],
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'api/anuncio'],
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/anuncio',
+                    'extraPatterns' => [
+                        'GET empresa/{id}' => 'empresa',
+                        'GET categoria/{id}' => 'categoria',
+                        'GET categoria/{nomecategoria}' => 'categorianome',
+                    ],
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
+                        '{nomecategoria}' => '<nomecategoria:\\w+>',
+                    ],
+
+                ],
+
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'api/empresa'],
+
                 [
                     'class' => 'yii\rest\UrlRule', 'controller' => 'api/auth',
                     'extraPatterns' => [
                         'POST login' => 'login',
                         'POST novo' => 'novo',
-                        'GET {id}' => '',
                     ],
-                    'tokens' => [
-                        '{id}' => '<id:\\d+>',
-                    ],
-
                 ],
             ],
         ],

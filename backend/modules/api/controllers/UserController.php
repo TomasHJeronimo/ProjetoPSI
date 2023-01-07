@@ -32,6 +32,10 @@ class UserController extends ActiveController
         return $behaviors;
     }
 
+
+    /*
+        Função basic Auth
+   */
     public function auth($username, $password){
         $this->user = \common\models\User::findByUsername($username);
 
@@ -42,7 +46,18 @@ class UserController extends ActiveController
         return null;
     }
 
-    /* Método para devolver número de Utilizadores registados */
+
+    /*
+        Função para devolver o numero de utilizadores registados no website
+
+        Link para aceder ao resultado -> http://localhost/HuntingJobs/backend/web/api/users/count
+
+        Dados necessários para obter resposta:
+            -> Basic Auth com username, e password
+                -> Caso tenha permissões , pode obter a resposta da API
+
+        Comando Curl:
+   */
     public function actionCount()
     {
         $recs = User::find()->all();
