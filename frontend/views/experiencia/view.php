@@ -11,6 +11,8 @@ $this->params['breadcrumbs'][] = ['label' => 'Experiencias', 'url' => ['index']]
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
+
+
 <div class="experiencia-view">
 
     <h1><?= Html::encode($this->title) ?></h1>

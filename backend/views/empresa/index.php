@@ -223,8 +223,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <th scope="col" class="border-0 text-uppercase font-medium">Nome</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Role</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Criado a</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">gerir</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium">Morada</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium">Gerir</th>
                             </tr>
                             </thead>
                             <tbody>

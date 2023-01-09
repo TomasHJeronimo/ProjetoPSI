@@ -40,10 +40,13 @@ class CategoriaController extends Controller
     {
         $searchModel = new CategoriaSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $query = Categoria::find();
+        $categorias = $query->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'categorias' => $categorias,
         ]);
     }
 

@@ -40,10 +40,13 @@ class AnuncioController extends Controller
     {
         $searchModel = new AnuncioSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        $query = Anuncio::find();
+        $anuncios = $query->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'anuncios' =>$anuncios
         ]);
     }
 
