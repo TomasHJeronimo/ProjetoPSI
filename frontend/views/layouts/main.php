@@ -45,6 +45,7 @@ AppAsset::register($this);
     } else {
         $menuItems[] = ['label' => 'Ofertas', 'url' => ['/anuncio/index']];
         $menuItems[] = ['label' => 'Minhas Empresas', 'url' => ['/empresa/index']];
+        $menuItems[] = ['label' => 'Candidaturas', 'url' => ['/candidatura/index']];
         $menuItems[] = ['label' => 'Perfil', 'url' => ['/user/view' , 'id'=>Yii::$app->getUser()->id]];
 
         $menuItems[] = '<li>'

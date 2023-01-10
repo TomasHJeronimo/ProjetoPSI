@@ -158,7 +158,6 @@ $this->params['breadcrumbs'][] = $this->title;
         }
 
 
-
         .my_img {
             vertical-align: top;
             position: flex;
@@ -236,7 +235,7 @@ $this->params['breadcrumbs'][] = $this->title;
             object-fit: cover;
         }
 
-        
+
         ._product-detail-content {
             background: #fff;
             padding: 15px;
@@ -534,19 +533,31 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <h2><u>Job Description </u></h2>
                                 <?= $model->descricao ?>
                             </div>
-                                <ul class="spe_ul"></ul>
+                            <ul class="spe_ul"></ul>
 
                             <div class="_p-features">
                                 <h2><u>Perfil-Procurado </u></h2>
                                 <?= $model->perfil_procurado ?>
                             </div>
-                                <ul class="spe_ul"></ul>
-                                <div class="_p-qty-and-cart">
-                                    <div class="_p-add-cart">
+                            <ul class="spe_ul"></ul>
+                            <div class="_p-qty-and-cart">
+                                <div class="_p-add-cart">
+
+
+                                    <?php
+                                    if (!Yii::$app->user->isGuest) {
+                                        ?>
+
                                         <?= Html::a('<span class="fa fa-star-o"></span> Adicionar aos favoritos', ['view', 'id' => $model->id], ['class' => 'btn btn-warning']) ?>
-                                        <?= Html::a('Candidatar-me', ['view', 'id' => $model->id], ['class' => 'btn btn-success']) ?>
-                                    </div>
+                                        <?= Html::a('Candidatar-me', ['candidatura/create', 'anuncio' => $model->id], ['class' => 'btn btn-success']) ?>
+                                        <?php
+                                    }
+                                    ?>
+                                    <p style="color: red">Faça Login para se candidatar a uma oferta</p>
+                                    <?= Html::a('Login', ['site/login'], ['class' => 'btn btn-success']) ?>
+                                    <?= Html::a('Registo', ['site/signup'], ['class' => 'btn btn-primary']) ?>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>

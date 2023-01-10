@@ -12,10 +12,6 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id_user')->textInput() ?>
-
-    <?= $form->field($model, 'id_anuncio')->textInput() ?>
-
     <?= $form->field($model, 'mensagem')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'data_candidatura')->textInput() ?>
