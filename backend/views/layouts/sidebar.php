@@ -52,7 +52,7 @@ use yii\grid\GridView;
                     ['label' => 'Categorias','url' => ['/categoria/index']],
                     ['label' => 'Empresas','url' => ['/empresa/index']],
                     ['label' => 'Ofertas','url' => ['/anuncio/index']],
-                    ['label' => 'Experiencias','url' => ['/experiencia/index']],
+                    ['label' => 'Experiências','url' => ['/experiencia/index']],
 
                 ],
             ]);
