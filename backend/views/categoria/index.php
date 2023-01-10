@@ -205,8 +205,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Nova Categoria', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
     <div class="container-fluid">
