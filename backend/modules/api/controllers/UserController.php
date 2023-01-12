@@ -16,6 +16,10 @@ use const Couchbase\ENCODER_FORMAT_JSON;
  */
 class UserController extends ActiveController
 {
+    /*
+            curl -u "login:password" -X GET http://localhost/HuntingJobs/backend/web/api/users
+    */
+
     public $modelClass = 'common\models\User';
 
 
@@ -26,8 +30,6 @@ class UserController extends ActiveController
             'class' => HttpBasicAuth::className(),
             'auth' => [$this, 'auth'],
         ];
-
-
 
         return $behaviors;
     }
@@ -56,12 +58,30 @@ class UserController extends ActiveController
             -> Basic Auth com username, e password
                 -> Caso tenha permissões , pode obter a resposta da API
 
-        Comando Curl:
+        Comando Curl: curl -u "login:password" -X GET http://localhost/HuntingJobs/backend/web/api/users/count
    */
     public function actionCount()
     {
         $recs = User::find()->all();
         return ['count' => count($recs)];
+    }
+
+    /*
+        Função para devolver o numero de utilizadores registados no website na ultima semana
+
+        Link para aceder ao resultado -> http://localhost/HuntingJobs/backend/web/api/users/semana
+
+        Comando Curl: curl -u "login:password" -X GET http://localhost/HuntingJobs/backend/web/api/users/semana
+   */
+    public function actionSemana(){
+        $FirstDay = date("Y-m-d", strtotime('sunday last week'));
+        $LastDay = date("Y-m-d", strtotime('sunday this week'));
+
+
+        $users = new $this->modelClass;
+        $semana = $users::find()->where(['between', 'created_at', $FirstDay, $LastDay])->all();
+
+        return ['count' => count($semana)];
     }
 
 
