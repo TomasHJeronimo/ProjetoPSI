@@ -1,15 +1,15 @@
 <?php
 
-namespace app\models;
+namespace frontend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\ExpProfissional;
+use common\models\Favorito;
 
 /**
- * ExpProfissionalSearch represents the model behind the search form of `common\models\ExpProfissional`.
+ * FavoritoSearch represents the model behind the search form of `common\models\Favorito`.
  */
-class ExpProfissionalSearch extends ExpProfissional
+class FavoritoSearch extends Favorito
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,7 @@ class ExpProfissionalSearch extends ExpProfissional
     public function rules()
     {
         return [
-            [['id', 'idUser', 'id_categoria'], 'integer'],
-            [['titulo', 'descricao', 'data_inicio', 'data_fim'], 'safe'],
+            [['id', 'id_user', 'id_anuncio'], 'integer'],
         ];
     }
 
@@ -40,7 +39,7 @@ class ExpProfissionalSearch extends ExpProfissional
      */
     public function search($params)
     {
-        $query = ExpProfissional::find();
+        $query = Favorito::find();
 
         // add conditions that should always apply here
 
@@ -59,14 +58,9 @@ class ExpProfissionalSearch extends ExpProfissional
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'idUser' => $this->idUser,
-            'id_categoria' => $this->id_categoria,
-            'data_inicio' => $this->data_inicio,
-            'data_fim' => $this->data_fim,
+            'id_user' => $this->id_user,
+            'id_anuncio' => $this->id_anuncio,
         ]);
-
-        $query->andFilterWhere(['like', 'titulo', $this->titulo])
-            ->andFilterWhere(['like', 'descricao', $this->descricao]);
 
         return $dataProvider;
     }

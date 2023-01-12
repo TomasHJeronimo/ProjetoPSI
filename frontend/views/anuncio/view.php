@@ -551,11 +551,14 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <?= Html::a('<span class="fa fa-star-o"></span> Adicionar aos favoritos', ['view', 'id' => $model->id], ['class' => 'btn btn-warning']) ?>
                                         <?= Html::a('Candidatar-me', ['candidatura/create', 'anuncio' => $model->id], ['class' => 'btn btn-success']) ?>
                                         <?php
-                                    }
+                                    }else{
                                     ?>
                                     <p style="color: red">Faça Login para se candidatar a uma oferta</p>
                                     <?= Html::a('Login', ['site/login'], ['class' => 'btn btn-success']) ?>
                                     <?= Html::a('Registo', ['site/signup'], ['class' => 'btn btn-primary']) ?>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
