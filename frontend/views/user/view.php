@@ -119,14 +119,14 @@ $this->params['breadcrumbs'][] = $this->title;
                                                                                         value="<?= $model->password_hash ?>">
                     </div>
                 </div>
-                <!--<div class="row mt-3">
+                <div class="row mt-3">
                     <div class="col-md-6"><label class="labels">País</label><input type="text" readonly="true"
                                                                                    class="form-control"
                                                                                    value="Em Desenvolvimento"></div>
                     <div class="col-md-6"><label class="labels">Região</label><input type="text" readonly="true"
                                                                                      class="form-control"
                                                                                      value="Em Desenvolvimento"></div>
-                </div>-->
+                </div>
                 <div class="mt-4 text-center">
                     <?= Html::a('Alterar Dados', ['update', 'id' => $model->id], ['class' => 'btn btn-primary profile-button']) ?>
                 </div>

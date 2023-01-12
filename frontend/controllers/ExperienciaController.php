@@ -42,14 +42,10 @@ class ExperienciaController extends Controller
     {
         $searchModel = new ExperienciaSearch();
         $dataProvider = $searchModel->searchMinhas($this->request->queryParams);
-        $query = Experiencia::find();
-        $experiencias = $query->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'experiencias' => $experiencias,
-
         ]);
     }
 
