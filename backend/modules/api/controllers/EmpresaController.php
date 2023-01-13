@@ -21,7 +21,7 @@ class EmpresaController extends ActiveController
 
     public $modelClass = 'common\models\Empresa';
 
-
+    /*
     public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -35,7 +35,7 @@ class EmpresaController extends ActiveController
 
 
 
-  //   --   Função basic Auth --
+     --   Função basic Auth --
 
     public function auth($username, $password){
         $this->user = \common\models\User::findByUsername($username);
@@ -46,7 +46,7 @@ class EmpresaController extends ActiveController
 
         return null;
     }
-
+*/
 
 
 }

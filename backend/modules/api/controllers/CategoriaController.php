@@ -20,7 +20,7 @@ class CategoriaController extends ActiveController
 
     public $modelClass = 'common\models\Categoria';
 
-
+/*
     public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -34,7 +34,7 @@ class CategoriaController extends ActiveController
 
 
 
-    // --   Função basic Auth --
+     --   Função basic Auth --
 
     public function auth($username, $password){
         $this->user = \common\models\User::findByUsername($username);
@@ -46,7 +46,7 @@ class CategoriaController extends ActiveController
         return null;
     }
 
-
+    */
 }
 
 

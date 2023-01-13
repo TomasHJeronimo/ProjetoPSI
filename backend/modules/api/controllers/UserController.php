@@ -38,7 +38,6 @@ class UserController extends ActiveController
     /*
         Função basic Auth
    */
-    
     public function auth($username, $password){
         $this->user = \common\models\User::findByUsername($username);
 

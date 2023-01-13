@@ -21,7 +21,7 @@ class ExperienciaController extends ActiveController
 
     public $modelClass = 'common\models\Experiencia';
 
-
+    /*
     public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -34,7 +34,7 @@ class ExperienciaController extends ActiveController
     }
 
 
-    //  --  Função basic Auth  --
+      --  Função basic Auth  --
 
     public function auth($username, $password){
         $this->user = \common\models\User::findByUsername($username);
@@ -45,7 +45,7 @@ class ExperienciaController extends ActiveController
 
         return null;
     }
-
+*/
 
 
 
