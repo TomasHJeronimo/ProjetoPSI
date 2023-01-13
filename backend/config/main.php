@@ -55,6 +55,7 @@ return [
                     'class' => 'yii\rest\UrlRule', 'controller' => 'api/user',
                     'extraPatterns' => [
                         'GET count' => 'count',
+                        'GET semana' => 'semana',
                     ]
                 ],
                 [
@@ -72,7 +73,17 @@ return [
                 ],
 
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'api/empresa'],
-
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'api/candidatura',
+                    'extraPatterns' => [
+                        'POST nova' => 'nova'
+                    ],
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/categoria',
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => 'api/experiencia',
+                ],
                 [
                     'class' => 'yii\rest\UrlRule', 'controller' => 'api/auth',
                     'extraPatterns' => [

@@ -8,18 +8,18 @@ use yii\filters\auth\HttpBasicAuth;
 use yii\rest\ActiveController;
 use yii\web\Response;
 
-class EmpresaController extends ActiveController
+class ExperienciaController extends ActiveController
 {
     /*
 
     http://localhost/HuntingJobs/backend/web/api/empresas
     Usado para obter os dados de todas as empresas
 
-    Comando Curl: curl -X GET http://localhost/HuntingJobs/backend/web/api/empresas
+    Comando Curl: curl -X GET http://localhost/HuntingJobs/backend/web/api/experiencias
 
     */
 
-    public $modelClass = 'common\models\Empresa';
+    public $modelClass = 'common\models\Experiencia';
 
 
     public function behaviors()
@@ -34,8 +34,7 @@ class EmpresaController extends ActiveController
     }
 
 
-
-  //   --   Função basic Auth --
+    //  --  Função basic Auth  --
 
     public function auth($username, $password){
         $this->user = \common\models\User::findByUsername($username);
@@ -46,6 +45,8 @@ class EmpresaController extends ActiveController
 
         return null;
     }
+
+
 
 
 

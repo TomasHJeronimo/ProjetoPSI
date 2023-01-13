@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use frontend\mosquitto\phpMQTT;
 use Yii;
 
 /**
@@ -23,6 +24,8 @@ class Candidatura extends \yii\db\ActiveRecord
         return 'candidatura';
     }
 
+
+
     /**
      * {@inheritdoc}
      */
@@ -35,6 +38,7 @@ class Candidatura extends \yii\db\ActiveRecord
             [['data_candidatura'], 'safe'],
         ];
     }
+
 
     /**
      * {@inheritdoc}
@@ -49,4 +53,5 @@ class Candidatura extends \yii\db\ActiveRecord
             'data_candidatura' => 'Data Candidatura',
         ];
     }
+
 }

@@ -16,11 +16,11 @@ class AuthController extends ActiveController
         Função para registar um novo utilizador
         Maioritariamente desenvolvido para o registo na APlicação android
 
-        Link para aceder ao resultado -> http://localhost/HuntingJobs/backend/web/api/users/novo
+        Link para aceder ao resultado -> http://localhost/HuntingJobs/backend/web/api/auth/novo
 
         Dados necessários no body para registar o utilizador : username, email, password
 
-        Comando Curl:
+        Comando Curl: curl -X POST http://localhost/HuntingJobs/backend/web/api/auth/novo -d "username=MonteiroCurl2&password=monteiropassword&email=email@curl2l.pt"
    */
     public function actionNovo()
     {
@@ -58,7 +58,7 @@ class AuthController extends ActiveController
 
     Link para aceder ao resultado -> http://localhost/HuntingJobs/backend/web/api/users/auth/login
 
-    Comando Curl:
+    Comando Curl: curl -X POST http://localhost/HuntingJobs/backend/web/api/auth/login -d "username=MonteiroCurl2&password=monteiropassword"
     */
     public function actionLogin()
     {
