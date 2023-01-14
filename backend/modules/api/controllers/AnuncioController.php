@@ -12,7 +12,7 @@ class AnuncioController extends ActiveController
     public $categorias = 'common\models\Categoria';
 
 
-    /*
+
     public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -26,9 +26,6 @@ class AnuncioController extends ActiveController
 
 
 
-     --   Função basic Auth --
-
-
     public function auth($username, $password){
         $this->user = \common\models\User::findByUsername($username);
 
@@ -38,7 +35,7 @@ class AnuncioController extends ActiveController
 
         return null;
     }
-*/
+
 
     /*
     Função para retribuir todos os anuncios de uma só empresa através do id da empresa

@@ -35,7 +35,7 @@ class CandidaturaController extends ActiveController
 
     public $modelClass = 'common\models\Candidatura';
 
-    /*
+
     public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -48,9 +48,6 @@ class CandidaturaController extends ActiveController
     }
 
 
-
-      --  Função basic Auth --
-
     public function auth($username, $password){
         $this->user = \common\models\User::findByUsername($username);
 
@@ -60,7 +57,7 @@ class CandidaturaController extends ActiveController
 
         return null;
     }
-*/
+
 
     public function actionNova(){
 
