@@ -69,13 +69,16 @@ return [
                         '{id}' => '<id:\\d+>',
                         '{nomecategoria}' => '<nomecategoria:\\w+>',
                     ],
-
                 ],
 
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'api/empresa'],
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'api/candidatura',
                     'extraPatterns' => [
-                        'POST nova' => 'nova'
+                        'POST nova' => 'nova',
+                        'GET user/{id}' => 'user',
+                    ],
+                    'tokens' => [
+                        '{id}' => '<id:\\d+>',
                     ],
                 ],
                 [

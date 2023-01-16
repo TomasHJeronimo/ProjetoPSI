@@ -77,7 +77,7 @@ class Anuncio extends \yii\db\ActiveRecord
         $myJSON = json_encode($myObj);
 
         if ($insert){
-            $this->mosquittoPublish("ANUNCIOS/".$myObj->categoria, "O anuncio ". $myObj->titulo ." foi adicionado com a categoria ". $myObj->categoria );
+            $this->mosquittoPublish($myObj->categoria, "O anuncio ". $myObj->titulo ." foi adicionado com a categoria ". $myObj->categoria );
             $this->mosquittoPublish("ANUNCIOS", "O anuncio ". $myObj->titulo ." foi adicionado á lista");
         }
 
