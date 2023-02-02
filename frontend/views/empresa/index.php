@@ -22,12 +22,6 @@ $this->params['breadcrumbs'][] = $this->title;
             }
     </style>
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Nova Empresa', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
@@ -43,15 +37,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title text-uppercase mb-0">Minhas Empresas</h5>
-                    </div>
                     <div class="table-responsive">
                         <table class="table no-wrap user-table mb-0">
                             <thead>
                             <tr>
-                                <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium pl-4">ID</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Nome</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium" style="width: 30%">Descrição</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Telefone</th>
@@ -100,11 +90,52 @@ $this->params['breadcrumbs'][] = $this->title;
                             <?php endforeach; ?>
                             </tbody>
                         </table>
+                        <div class="text-center">
+                            <?= Html::a('Nova Empresa', ['create'], ['class' => 'btn btn-success', 'id' => 'btnNova']) ?>
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 50px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        td {
+            border-top: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            font-size: 14px;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        #btnNova {
+            margin-top: 30px;
+        }
+    </style>
+
 
 
 </div>

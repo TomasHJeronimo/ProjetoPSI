@@ -3,11 +3,14 @@
 use yii\helpers\Html;
 
 ?>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-<div class='tile'>
-    <img class='tile-img' style="background-image: url(https://static.pexels.com/photos/9050/pexels-photo.jpg);"/>
-    <div class='tile-info'>
-        <h1><?= Html::a($model->titulo, ['view', 'id'=>$model->id]); ?></h1>
-        <p><?= $model->descricao ?></p>
-    </div>
+
+<!-- CSS for the card view -->
+
+
+
+<div class="card">
+    <img src="https://picsum.photos/300/200" alt="Job Offer Image">
+    <h2>Job Offer Title</h2>
+    <p>Job Offer Description</p>
+    <button>Apply</button>
 </div>
