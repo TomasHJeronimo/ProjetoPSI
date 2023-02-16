@@ -40,10 +40,19 @@ class CandidaturaController extends Controller
     {
         $searchModel = new CandidaturaSearch();
         $dataProvider = $searchModel->searchMinhasCandidaturas($this->request->queryParams);
+        $query = Candidatura::find();
+        $candidaturas = $query->all();
+        $queryAnuncios = Candidatura::find();
+        $empresas = $queryAnuncios->all();
+        $queryAnuncios = Candidatura::find();
+        $anuncios = $queryAnuncios->all();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'candidaturas' => $candidaturas,
+            'anuncios' => $anuncios,
+            'empresas' => $empresas,
         ]);
     }
 
@@ -70,12 +79,12 @@ class CandidaturaController extends Controller
         $model = new Candidatura();
 
         $model->id_user = \Yii::$app->user->id;
-        $model->id_anuncio = \Yii::$app->request->get('anuncio');
+        $model->id_anuncio = \Yii::$app->request->get('id');
         $model->data_candidatura = date('Y-m-d');
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+                return $this->redirect(['index']);
             }
         } else {
             $model->loadDefaultValues();

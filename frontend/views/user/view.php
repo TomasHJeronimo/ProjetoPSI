@@ -127,9 +127,6 @@ $this->params['breadcrumbs'][] = $this->title;
                                                                                      class="form-control"
                                                                                      value="Em Desenvolvimento"></div>
                 </div>
-                <div class="mt-4 text-center">
-                    <?= Html::a('Alterar Dados', ['update', 'id' => $model->id], ['class' => 'btn btn-primary profile-button']) ?>
-                </div>
 
 
             </div>

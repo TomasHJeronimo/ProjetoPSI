@@ -12,7 +12,7 @@ class AnuncioController extends ActiveController
     public $categorias = 'common\models\Categoria';
 
 
-    /*
+/*
     public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -23,10 +23,6 @@ class AnuncioController extends ActiveController
 
         return $behaviors;
     }
-
-
-
-     --   Função basic Auth --
 
 
     public function auth($username, $password){

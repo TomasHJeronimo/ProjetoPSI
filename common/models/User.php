@@ -53,7 +53,9 @@ class User extends ActiveRecord implements IdentityInterface
         $myJSON = json_encode($myObj);
 
         if ($insert){
-            $this->mosquittoPublish("UTILIZADORES", "Foi registado um novo utilizador com o id:". $myObj->id . " e username: " . $myObj->username);
+            $this->mosquittoPublish("UTILIZADORES",
+                "Foi registado um novo utilizador com o id:". $myObj->id .
+                " e username: " . $myObj->username);
         }
     }
 
@@ -70,7 +72,8 @@ class User extends ActiveRecord implements IdentityInterface
 
         $myJSON = json_encode($myObj);
 
-        $this->mosquittoPublish("UTILIZADORES", "O utilizador '" . $myObj->username ."' com id:" . $myObj->id . " foi eliminado");
+        $this->mosquittoPublish("UTILIZADORES", "O utilizador '"
+            . $myObj->username ."' com id:" . $myObj->id . " foi eliminado");
     }
 
 

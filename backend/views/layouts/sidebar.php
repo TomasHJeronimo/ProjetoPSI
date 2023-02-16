@@ -10,7 +10,7 @@ use yii\grid\GridView;
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <?= Html::a('<img src="'.  $assetDir . '/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>', ['site/index'], ['class' => 'brand-link']) ?>
+        <span class="brand-text font-weight-light">Hunting Jobs</span>', ['site/index'], ['class' => 'brand-link']) ?>
 
 
     <!-- Sidebar -->
@@ -43,7 +43,7 @@ use yii\grid\GridView;
             <?php
             echo \hail812\adminlte\widgets\Menu::widget([
                 'items' => [
-                    ['label' => 'Yii2 PROVIDED', 'header' => true],
+                    ['label' => 'Àrea Programador', 'header' => true],
                     ['label' => 'Login', 'url' => ['site/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],
                     ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank'],
                     ['label' => 'PHPMyAdmin', 'icon' => 'dot-circle', 'url' => 'http://localhost/phpmyadmin', 'target' => '_blank'],

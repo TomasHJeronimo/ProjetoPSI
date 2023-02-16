@@ -15,31 +15,58 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="candidatura-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'id_user',
-            'id_anuncio',
-            'mensagem:ntext',
-            'data_candidatura',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Candidatura $model, $key, $index, $column) {
-                    if ($action != 'update'){
-                        return Url::toRoute([$action, 'id' => $model->id]);
-                    }
-                 }
-            ],
-        ],
-    ]); ?>
+    <div class="container-fluid">
+        <h2 class="page-title">Minhas Candidaturas</h2>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Nome da Empresa</th>
+                <th>Data da Candidatura</th>
+                <th>Acções</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
 
+            foreach ($candidaturas as $candidatura) :
 
+                $anuncioCandidatura = \common\models\Anuncio::find()->where(['id' => $candidatura->id_anuncio])->one();
+
+                $anuncioEmpresa = \common\models\Empresa::find()->where(['id' => $anuncioCandidatura->id_Empresa])->one();
+
+            ?>
+            <tr>
+
+                <td><?= $anuncioCandidatura->titulo ?></td>
+                <td><?= $anuncioEmpresa->Nome ?></td>
+                <td><?= $candidatura->data_candidatura ?></td>
+                <td>
+                    <?= Html::a('<i class="btn btn-danger">Desistir</i>', ['candidatura/delete', 'id' => $candidatura->id], [
+                        'class' => 'delete',
+                        'title'=>'Apagar',
+                        'data' => [
+                            'confirm' => 'Tem a certeza que quer apagar esta empresa?',
+                            'method' => 'post',
+                        ],
+                        'data-toggle'=>'tooltip',
+                    ]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+
+    <style>
+
+        .page-title {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+    </style>
 </div>

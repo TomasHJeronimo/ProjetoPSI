@@ -69,8 +69,6 @@ $this->params['breadcrumbs'][] = $this->title;
         }
 
 
-
-
         .my_img {
             vertical-align: top;
             position: flex;
@@ -175,13 +173,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
                                                 foreach ($empresas as $empresa) :
 
-                                                if ($model->id_Empresa == $empresa->id){
-                                                    ?>
+                                                    if ($model->id_Empresa == $empresa->id) {
+                                                        ?>
 
-                                                    <?= Html::a($empresa->Nome, ['empresa/view', 'id' => $empresa->id], ['class' => 'settings','title'=>'Mais Informações', 'data-toggle'=>'tooltip']); ?>
+                                                        <?= Html::a($empresa->Nome, ['empresa/view', 'id' => $empresa->id], ['class' => 'settings', 'title' => 'Mais Informações', 'data-toggle' => 'tooltip']); ?>
 
-                                                <?php
-                                                }
+                                                        <?php
+                                                    }
 
                                                 endforeach;
 
@@ -203,7 +201,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                             <div class="row">
                                 <div class="col-lg-12 text-center">
-                                    <?= Html::a('Enviar Candidatura', ['candidatura/create', 'id' => $model->id], ['class' => 'btn btn-success','title'=>'Mais Informações', 'data-toggle'=>'tooltip']); ?>
+                                    <?= Html::a('Enviar Candidatura', ['candidatura/create', 'id' => $model->id], ['class' => 'btn btn-success', 'title' => 'Mais Informações', 'data-toggle' => 'tooltip']); ?>
                                 </div>
                             </div>
                         </div>

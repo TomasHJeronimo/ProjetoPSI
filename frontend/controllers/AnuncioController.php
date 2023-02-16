@@ -56,24 +56,15 @@ class AnuncioController extends Controller
     {
        $idEmpresa = $this->findModel(\Yii::$app->request->get('id'))->id_Empresa;
        $empresa = Empresa::find()->where(['id' => $idEmpresa]);
-       $query = $empresa->all();
+       $empresaAuthor = $empresa->one();
 
-       $funciona = 0;
+       $num_empresas = false;
 
-       foreach ($query as $emp){
-           if ($emp->idAdmin == \Yii::$app->user->id){
-               $funciona = 1;
-           }
+       if ($empresaAuthor->idAmin = \Yii::$app->user->id){
+           $num_empresas = true;
        }
 
-
-       if ($funciona == 1){
-           return true;
-       }
-       else{
-           return false;
-       }
-
+       return $num_empresas;
     }
 
     /**

@@ -54,9 +54,53 @@ use dosamigos\datetimepicker\DateTimePicker;
     ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-success', 'id' => 'btnEnviarExperiencia']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .experiencia-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #btnEnviarExperiencia {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .experiencia-form h1 {
+            display: none;
+        }
+
+        #btnEnviarExperiencia:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+
+

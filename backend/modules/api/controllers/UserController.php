@@ -74,7 +74,7 @@ class UserController extends ActiveController
         Comando Curl: curl -u "login:password" -X GET http://localhost/HuntingJobs/backend/web/api/users/semana
    */
     public function actionSemana(){
-        $FirstDay = date("Y-m-d", strtotime('sunday last week'));
+        $FirstDay = date("Y-m-d", strtDotime('sunday last week'));
         $LastDay = date("Y-m-d", strtotime('sunday this week'));
 
 
